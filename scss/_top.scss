@@ -1,0 +1,58 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+top
+*************************************************/
+.wrap_kv {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  overflow: hidden;
+  .geometory {
+    position: absolute;
+    top: v.pxtovw(-165);
+    right: v.pxtovw(-544);
+    width: v.pxtovw(1616);
+  }
+  p {
+    position: absolute;
+    left: v.pxtovw(40);
+    bottom: 6.3rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 2.2;
+  }
+}
+
+.wrap_top-news {
+  background-color: #fff;
+  .inner-wide {
+    position: relative;
+  }
+  div,
+  p {
+    color: #000;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    padding: 1.8rem 0;
+  }
+  div {
+    font-size: 2rem;
+    margin-right: v.pxtovw(72);
+  }
+  p {
+    font-weight: 300;
+    span {
+      font-size: 1.6rem;
+      margin-right: 4.1rem;
+    }
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}
