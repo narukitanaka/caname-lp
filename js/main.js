@@ -1,23 +1,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 // GSAPアニメーション
 ///////////////////////////////////////////////////////////////////////////////////////
-//順番にフェードイン
-// document.querySelectorAll(".fade_triger").forEach((trigger) => {
-//   gsap.fromTo(
-//     trigger.querySelectorAll(".anime-fade"),
-//     { opacity: 0, y: -10 },
-//     {
-//       opacity: 1,
-//       y: 0,
-//       duration: 0.7,
-//       stagger: 0.3, // 順番にフェードインする間隔
-//       scrollTrigger: {
-//         trigger: trigger,
-//         start: "top 50%",
-//       },
-//     }
-//   );
-// });
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".circle", {
+  scale: 1, // 最大スケール
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".buis-trigger",
+    start: "top bottom", // スクロール開始位置
+    // end: "bottom 50%", // スクロール終了位置
+    scrub: 1, // スクロールに追従する（1は追従の滑らかさ）
+    invalidateOnRefresh: true, // リサイズ時に再計算
+  },
+});
 
 ///////////////////////////////////////////
 //ハンバーガーメニュー
@@ -90,52 +86,32 @@ function showElement(entries) {
 //各Swiperイベントの初期化
 //////////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", (event) => {
-  //実例ギャラリースライダー
-  const swiperGallery = new Swiper(".swiper-gallery", {
-    loop: true,
-    slidesPerView: 2.5,
-    speed: 3000,
-    allowTouchMove: false,
-    freeMode: {
-      enabled: true,
-      momentum: false,
-      sticky: true,
-    },
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-    },
-    direction: "horizontal",
-    effect: "slide",
-    breakpoints: {
-      769: {
-        slidesPerView: 4.7,
+  setTimeout(() => {
+    //Top - PressSwiper
+    const topPress = new Swiper(".top-press_swiper", {
+      slidesPerView: 1.2,
+      loop: true,
+      speed: 1000,
+      allowTouchMove: false,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
       },
-    },
-  });
-
-  //文字の無限スライダー
-  // const swiperText = new Swiper(".txt-slider", {
-  //   loop: true,
-  //   slidesPerView: 0.4,
-  //   speed: 12000,
-  //   allowTouchMove: false,
-  //   spaceBetween: 50,
-  //   freeMode: {
-  //     enabled: true,
-  //     momentum: false,
-  //     sticky: true,
-  //   },
-  //   autoplay: {
-  //     delay: 0,
-  //     disableOnInteraction: false,
-  //   },
-  //   direction: "horizontal",
-  //   effect: "slide",
-  //   breakpoints: {
-  //     769: {
-  //       slidesPerView: 0.9,
-  //     },
-  //   },
-  // });
+      breakpoints: {
+        769: {
+          slidesPerView: "auto",
+          loopedSlides: 3,
+        },
+      },
+      on: {
+        beforeInit: function () {
+          // ループ用のスライドが追加される前に元のスライド数を保存
+          this.params.loopedSlides = document.querySelectorAll(
+            ".top-press_swiper .swiper-slide"
+          ).length;
+        },
+      },
+    });
+  }, 100);
 });

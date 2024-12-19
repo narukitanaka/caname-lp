@@ -9,6 +9,7 @@
   <!-- <link rel="icon" type="image/png" href="images/common/fav.png" /> -->
   <!-- <meta name="robots" content="index, follow"> -->
   <meta name="format-detection" content="telephone=no">
+
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -34,6 +35,9 @@
   <title>X Boder Project｜クロスボーダープロジェクト</title>
   <meta name="description" content="エンタメとテクノロジーを両輪に、固定観念に囚われず、新しい発想を形にしていく。どんな空想も、現実にしてみせる。それが私たちXBP Inc.の存在理由です。" />
   <meta name="keywords" content="" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
@@ -95,8 +99,8 @@
       <div class="wrap_top-news">
         <div class="inner-wide">
           <a href="#">
-            <div class="config">News</div>
-            <p><span class="config">2025.01.11</span>投稿タイトルが入ります。テキストテキストテキストテキスト</p>
+            <div class="config con-l">News</div>
+            <p><span class="config con-l">2025.01.11</span>投稿タイトルが入ります。テキストテキストテキストテキスト</p>
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="10.5" cy="10.5" r="10" stroke="black" />
               <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
@@ -106,28 +110,30 @@
       </div><!-- /.wrap_top-news -->
 
 
-      <section class="wrap_concept">
+      <section class="wrap_concept buis-trigger">
         <div class="inner">
           <h1>
             創造の<br>
             ボーダーラインを<br>
             広げる
           </h1>
-          <div class="ttl-wrap">
-            <div class="num"><span class="line"></span>01</div>
-            <h2>Concept</h2>
+          <div class="contents">
+            <div class="ttl-wrap">
+              <div class="num"><span class="line"></span>01</div>
+              <h2>Concept</h2>
+            </div>
+            <p>
+              未知の可能性が、形になる。<br>
+              その最初のきっかけは、いつも人間の想像力。<br>
+              エンタメが刺激した夢が、テクノロジーのビジョンを作り、<br>
+              テクノロジーが切り拓いた可能性が、エンタメに新たな表現をもたらしてきた。<br>
+              <br>
+              一つの会社のなかで、そのサイクルを作れたら。<br>
+              エンタメとテクノロジーを両輪に、固定観念に囚われず、<br>
+              新しい発想を形にしていく。どんな空想も、現実にしてみせる。<br>
+              それが私たちXBP Inc.の存在理由です。
+            </p>
           </div>
-          <p>
-            未知の可能性が、形になる。<br>
-            その最初のきっかけは、いつも人間の想像力。<br>
-            エンタメが刺激した夢が、テクノロジーのビジョンを作り、<br>
-            テクノロジーが切り拓いた可能性が、エンタメに新たな表現をもたらしてきた。<br>
-            <br>
-            一つの会社のなかで、そのサイクルを作れたら。<br>
-            エンタメとテクノロジーを両輪に、固定観念に囚われず、<br>
-            新しい発想を形にしていく。どんな空想も、現実にしてみせる。<br>
-            それが私たちXBP Inc.の存在理由です。
-          </p>
         </div>
       </section><!-- /.wrap_concept -->
 
@@ -146,12 +152,13 @@
           </p>
           <div class="img-box"><img src="images/common/business_img01.png" alt=""></div>
         </div>
+        <div class="circle"></div>
       </section><!-- /.wrap_business -->
 
 
       <section class="wrap_projects">
-        <h2>XBP Projects</h2>
-        <div class="top-pjbox flex">
+        <h2 class="config con-el">XBP Projects</h2>
+        <div class="top-pjblock flex">
           <div class="left">
             <div class="img-box obj-fit"><img src="images/common/projects-a_img01.jpg" alt=""></div>
             <div class="txt">
@@ -164,70 +171,80 @@
             <div class="pj-select">
               <a href="#" class="flex">
                 <div class="name">
-                  <p class="en"><span></span>IP revitalization</p>
-                  <p>IP再生</p>
+                  <p class="en congig con-l"><span></span>IP revitalization</p>
+                  <p class="anona">IP再生</p>
                 </div>
-                <div class="type">Entertainment</div>
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
-                </svg>
+                <div class="flex">
+                  <div class="type config con-me">Entertainment</div>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                    <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  </svg>
+                </div>
               </a>
             </div><!-- /.pj-select -->
             <div class="pj-select">
               <a href="#" class="flex">
                 <div class="name">
-                  <p class="en"><span></span>Co-producing New Animation Internationally</p>
-                  <p>映像作品 国際共同制作</p>
+                  <p class="en congig con-l"><span></span>Co-producing New Animation Internationally</p>
+                  <p class="anona">映像作品 国際共同制作</p>
                 </div>
-                <div class="type">Entertainment</div>
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
-                </svg>
+                <div class="flex">
+                  <div class="type config con-me">Entertainment</div>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                    <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  </svg>
+                </div>
               </a>
             </div><!-- /.pj-select -->
             <div class="pj-select">
               <a href="#" class="flex">
                 <div class="name">
-                  <p class="en"><span></span>New IP & Activity Development</p>
-                  <p>新IP&アクティビティ開発</p>
+                  <p class="en congig con-l"><span></span>New IP & Activity Development</p>
+                  <p class="anona">新IP&アクティビティ開発</p>
                 </div>
-                <div class="type">Entertainment</div>
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
-                </svg>
+                <div class="flex">
+                  <div class="type config con-me">Entertainment</div>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                    <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  </svg>
+                </div>
               </a>
             </div><!-- /.pj-select -->
             <div class="pj-select">
               <a href="#" class="flex">
                 <div class="name">
-                  <p class="en"><span></span>Powered Exosuit Development</p>
-                  <p>パワードスーツ開発</p>
+                  <p class="en congig con-l"><span></span>Powered Exosuit Development</p>
+                  <p class="anona">パワードスーツ開発</p>
                 </div>
-                <div class="type">Technology</div>
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
-                </svg>
+                <div class="flex">
+                  <div class="type config con-me">Technology</div>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                    <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  </svg>
+                </div>
               </a>
             </div><!-- /.pj-select -->
             <div class="pj-select">
               <a href="#" class="flex">
                 <div class="name">
-                  <p class="en"><span></span>Creative Fund</p>
-                  <p>ファンド</p>
+                  <p class="en congig con-l"><span></span>Creative Fund</p>
+                  <p class="anona">ファンド</p>
                 </div>
-                <div class="type">
-                  Entertainment<br>
-                  &<br>
-                  Technology
+                <div class="flex">
+                  <div class="type config con-me">
+                    Entertainment<br>
+                    &<br>
+                    Technology
+                  </div>
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                    <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  </svg>
                 </div>
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
-                </svg>
               </a>
             </div><!-- /.pj-select -->
           </div><!-- /.right -->
@@ -237,38 +254,40 @@
 
       <section class="wrap_members">
         <div class="inner">
-          <div class="ttl-wrap">
-            <div class="num"><span class="line"></span>03</div>
-            <h2>Members</h2>
+          <div class="ttl-posi">
+            <div class="ttl-wrap">
+              <div class="num"><span class="line"></span>03</div>
+              <h2>Members</h2>
+            </div>
           </div>
-          <div class="flex">
+          <div class="top-memblock flex">
             <div class="left flex">
-              <div class="img-box member">
-                <img src="images/members/ashino.jpg" alt="川邊 晃">
+              <div class="img-box obj-fit member">
+                <img src="images/members/members_kawabe.jpg" alt="川邊 晃">
                 <p>
                   川邊 晃<br>
-                  <span>Akira Kawabe</span>
+                  <span class="config con-l">Akira Kawabe</span>
                 </p>
               </div><!-- /.member -->
-              <div class="img-box member">
+              <div class="img-box obj-fit member">
                 <img src="images/members/members_saeki.jpg" alt="佐伯 まいこ">
                 <p>
                   佐伯 まいこ<br>
-                  <span>Maiko Saeki</span>
+                  <span class="config con-l">Maiko Saeki</span>
                 </p>
               </div><!-- /.member -->
-              <div class="img-box member">
+              <div class="img-box obj-fit member">
                 <img src="images/members/members_mori.jpg" alt="森 陽平">
                 <p>
                   森 陽平<br>
-                  <span>Youhei Mori</span>
+                  <span class="config con-l">Youhei Mori</span>
                 </p>
               </div><!-- /.member -->
-              <div class="img-box member">
+              <div class="img-box obj-fit member">
                 <img src="images/members/members_hujii.jpg" alt="藤井・Jack・考騎">
                 <p>
                   藤井・Jack・考騎<br>
-                  <span>Koki Jack FujiiKoki Jack Fujii</span>
+                  <span class="config con-l">Koki Jack Fujii</span>
                 </p>
               </div><!-- /.member -->
             </div><!-- /.left -->
@@ -280,13 +299,15 @@
                 プロジェクトごとにユニットを組み発展し続ける可塑的なビジネスチーム。<br>
                 それぞれが持つ好奇心こそが、XBPの活力です。
               </p>
-              <a href="#" class="btn01">
-                view All
-                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
-                </svg>
-              </a>
+              <div class="btn-wrap">
+                <a href="#" class="btn01">
+                  view All
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                    <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  </svg>
+                </a>
+              </div>
             </div><!-- /.right -->
           </div>
         </div>
@@ -304,39 +325,39 @@
             <a href="#" class="btn01">
               view All
               <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
               </svg>
             </a>
           </div><!-- /.left -->
           <div class="right">
             <dl>
               <a href="#">
-                <dt>2025.01.11</dt>
-                <dd>投稿タイトルが入ります。テキストテキスト</dd>
+                <dt class="config con-l">2025.01.11</dt>
+                <dd>投稿タイトルが入ります。テキストテキストテキストテキスト</dd>
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                  <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
                 </svg>
               </a>
             </dl>
             <dl>
               <a href="#">
-                <dt>2025.01.11</dt>
-                <dd>投稿タイトルが入ります。テキストテキスト</dd>
+                <dt class="config con-l">2025.01.11</dt>
+                <dd>投稿タイトルが入ります。テキストテキストテキストテキスト</dd>
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                  <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
                 </svg>
               </a>
             </dl>
             <dl>
               <a href="#">
-                <dt>2025.01.11</dt>
-                <dd>投稿タイトルが入ります。テキストテキスト</dd>
+                <dt class="config con-l">2025.01.11</dt>
+                <dd>投稿タイトルが入ります。テキストテキストテキストテキスト</dd>
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                  <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
                 </svg>
               </a>
             </dl>
@@ -347,38 +368,62 @@
 
       <section class="wrap_press">
         <div class="top-press_swiper">
-          <div class="swipper-wrapper">
+          <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="#">
                 <div class="img-box obj-fit"><img src="images/common/press_dammy01.jpg" alt=""></div>
                 <div class="contents">
                   <div class="cate">#Category</div>
                   <p>投稿タイトルが入ります。テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-                  <div class="time">2025.01.11</div>
+                  <div class="time config con-l">2025.01.11</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div class="img-box obj-fit"><img src="images/common/press_dammy02.jpg" alt=""></div>
+                <div class="contents">
+                  <div class="cate">#Category</div>
+                  <p>投稿タイトルが入ります。テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  <div class="time config con-l">2025.01.11</div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+                <div class="img-box obj-fit"><img src="images/common/press_dammy03.jpg" alt=""></div>
+                <div class="contents">
+                  <div class="cate">#Category</div>
+                  <p>投稿タイトルが入ります。テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  <div class="time config con-l">2025.01.11</div>
                 </div>
               </a>
             </div>
           </div>
         </div><!-- /.top-press_swiper -->
-        <div class="ttl-wrap">
-          <div class="num"><span class="line"></span>05</div>
-          <h2>Press Release</h2>
+        <div class="ttl-posi">
+          <div class="ttl-wrap">
+            <h2>Press Release</h2>
+            <div class="num"><span class="line"></span>05</div>
+          </div>
         </div>
         <a href="#" class="btn02">
           view All
           <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-            <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+            <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+            <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
           </svg>
         </a>
       </section><!-- /.wrap-press -->
 
 
-      <section class="wrap-company">
+      <section class="wrap-company common-contact">
         <div class="inner">
-          <div class="ttl-wrap">
-            <div class="num"><span class="line"></span>06</div>
-            <h2>Company Info</h2>
+          <div class="ttl-posi">
+            <div class="ttl-wrap">
+              <div class="num"><span class="line"></span>06</div>
+              <h2>Company Info</h2>
+            </div>
           </div>
           <table>
             <tr>
@@ -400,11 +445,11 @@
           <a href="#" class="btn01">
             view More
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-              <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+              <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+              <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
             </svg>
           </a>
-          <div class="flex">
+          <div class="contact_block flex">
             <div class="tel">
               <p>お電話でのお問い合わせ</p>
               <a href="#">
@@ -421,8 +466,8 @@
               <a href="#">
                 Contact us
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10.5" cy="10.5" r="10" stroke="black" />
-                  <path d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
+                  <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
+                  <path class="arrow-f" d="M14 10.5L8.75 13.5311L8.75 7.46891L14 10.5Z" fill="black" />
                 </svg>
               </a>
             </div>
@@ -436,21 +481,21 @@
 
 
     <footer class="footer">
-      <div class="inner">
-        <div class="logo img-box"><img src="images/common/logo.svg" alt=""></div>
-        <nav class="flex">
-          <ul>
-            <li><a href="#">Concept</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Members</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Pless Rerease</a></li>
-            <li><a href="#">Company</a></li>
-          </ul>
-        </nav>
+      <div class="logo img-box"><img src="images/common/logo.svg" alt=""></div>
+      <nav>
+        <ul class="flex">
+          <li><a href="#">Concept</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Members</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Pless Rerease</a></li>
+          <li><a href="#">Company</a></li>
+        </ul>
+      </nav>
+      <div class="footer-bottom flex">
         <a href="#">プライバシーポリシー</a>
-        <p><small>© XPB Inc. all rights reserved.</small></p>
+        <p><small class="config con-l">© XPB Inc. all rights reserved.</small></p>
       </div>
     </footer>
 

@@ -100,7 +100,7 @@ body {
 
 h2 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
 }
 
@@ -116,7 +116,7 @@ a {
   font-size: 1.4rem;
   font-weight: 300;
   color: #fff;
-  line-height: 1.7;
+  line-height: 2;
 }
 
 .anona {
@@ -124,18 +124,171 @@ a {
 }
 .config {
   font-family: v.$font-config;
-  font-weight: 600;
+  &.con-th {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 100;
+  }
+  &.con-el {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 200;
+  }
+  &.con-l {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 300;
+  }
+  &.con-re {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
+  }
+  &.con-me {
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500;
+  }
 }
 
 .ttl-wrap {
+  position: relative;
+  display: inline-block;
   font-family: v.$font-config;
+  text-align: end;
+  &::before {
+    content: "";
+    height: 0.5px;
+    position: absolute;
+    bottom: 1.4rem;
+  }
+  .num {
+    .line {
+      display: inline-block;
+      width: 2px;
+      aspect-ratio: 1/7;
+      margin-right: 5px;
+    }
+  }
   h2 {
     font-size: 8rem;
-    font-weight: 200;
+    font-variation-settings: "slnt" 0, "wdth" 100, "wght" 100;
+    line-height: 1;
   }
   .num {
     font-size: 2rem;
     font-weight: 200;
+  }
+}
+
+.contact_block {
+  width: 65rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  .tel,
+  .mail {
+    flex-basis: 48%;
+    p {
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 1/0.29;
+      font-size: 2.6rem;
+      font-family: v.$font-config;
+      font-variation-settings: "slnt" 0, "wdth" 100, "wght" 300;
+      border: 1px solid #fff;
+      svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .tel {
+    a {
+      svg {
+        left: 4rem;
+        rotate: 15deg;
+      }
+    }
+  }
+  .mail {
+    a {
+      svg {
+        right: 4rem;
+        .circle-s {
+          stroke: #fff;
+          transition: all 0.3s;
+        }
+        .arrow-f {
+          fill: #fff;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
+
+.btn01 {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.6rem;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
+  svg {
+    width: 3rem;
+    aspect-ratio: 1/1;
+    .circle-s {
+      stroke: #fff;
+      transition: all 0.3s;
+    }
+    .arrow-f {
+      fill: #fff;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.btn02 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
+  border: 0.5px solid #fff;
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+    .circle-s {
+      stroke: #fff;
+      transition: all 0.3s;
+    }
+    .arrow-f {
+      fill: #fff;
+      transition: all 0.3s;
+    }
+  }
+}
+
+.common-contact {
+  position: relative;
+  background: url(../images/common/common-contact_bg.jpg) no-repeat
+    bottom/contain;
+  .ashirai {
+    position: absolute;
+    &.geo01 {
+      top: -26rem;
+      right: v.pxtovw(-220);
+      width: v.pxtovw(575);
+      opacity: 0.6;
+    }
+    &.geo02 {
+      bottom: -8rem;
+      left: v.pxtovw(-418);
+      width: v.pxtovw(695);
+      opacity: 0.7;
+    }
   }
 }
 
