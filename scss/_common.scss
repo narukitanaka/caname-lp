@@ -86,7 +86,8 @@ body {
   }
 }
 .inner-wide {
-  width: 90%;
+  width: 95%;
+  max-width: 136rem;
   margin: 0 auto;
   @include mq(md) {
     width: 80%;
@@ -290,6 +291,14 @@ a {
       opacity: 0.7;
     }
   }
+}
+
+.bg-line {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/common/bg-line.svg) no-repeat top/cover;
+  z-index: 10;
 }
 
 .clearfix:after {

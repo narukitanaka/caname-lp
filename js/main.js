@@ -86,32 +86,57 @@ function showElement(entries) {
 //各Swiperイベントの初期化
 //////////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", (event) => {
-  setTimeout(() => {
-    //Top - PressSwiper
-    const topPress = new Swiper(".top-press_swiper", {
-      slidesPerView: 1.2,
-      loop: true,
-      speed: 1000,
-      allowTouchMove: false,
-      spaceBetween: 20,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+  //Top - PressSwiper
+  const topPress = new Swiper(".top-press_swiper", {
+    slidesPerView: 1.2,
+    loop: true,
+    speed: 1000,
+    allowTouchMove: false,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: "auto",
+        loopedSlides: 3,
       },
-      breakpoints: {
-        769: {
-          slidesPerView: "auto",
-          loopedSlides: 3,
-        },
+    },
+    on: {
+      beforeInit: function () {
+        // ループ用のスライドが追加される前に元のスライド数を保存
+        this.params.loopedSlides = document.querySelectorAll(
+          ".top-press_swiper .swiper-slide"
+        ).length;
       },
-      on: {
-        beforeInit: function () {
-          // ループ用のスライドが追加される前に元のスライド数を保存
-          this.params.loopedSlides = document.querySelectorAll(
-            ".top-press_swiper .swiper-slide"
-          ).length;
-        },
+    },
+  });
+
+  //Under - PressSwiper
+  const underPress = new Swiper(".p-projects_swiper", {
+    slidesPerView: 1.2,
+    loop: true,
+    speed: 1000,
+    allowTouchMove: false,
+    spaceBetween: 14,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: "3.4",
+        loopedSlides: 5,
       },
-    });
-  }, 100);
+    },
+    on: {
+      beforeInit: function () {
+        // ループ用のスライドが追加される前に元のスライド数を保存
+        this.params.loopedSlides = document.querySelectorAll(
+          ".p-projects_swiper .swiper-slide"
+        ).length;
+      },
+    },
+  });
 });

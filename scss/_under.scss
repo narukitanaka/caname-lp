@@ -3,3 +3,330 @@
 /*************************************************
 under
 *************************************************/
+.p-under {
+  position: relative;
+  padding-top: 10rem;
+  .wrap_p-project_mv {
+    position: relative;
+    z-index: 20;
+    h1 {
+      font-size: 10rem;
+      color: #c7c7c7;
+      margin-left: v.pxtovw(40);
+    }
+    .under-kv_geometory {
+      width: v.pxtovw(900);
+      position: absolute;
+      top: v.pxtovw(-580);
+      right: v.pxtovw(-300);
+      opacity: 0.8;
+    }
+  }
+}
+.p-projects {
+  h1 {
+    margin-bottom: 6rem;
+  }
+  nav {
+    width: 66rem;
+    margin-left: v.pxtovw(120);
+    margin-bottom: 28.5rem;
+    ul {
+      flex-wrap: wrap;
+      gap: 1.7rem;
+      li {
+        border: 1px solid #fff;
+        a {
+          display: block;
+          padding: 0.8rem 3.5rem 0.8rem;
+          font-size: 1.6rem;
+          font-weight: 400;
+          transition: all 0.3s;
+          &.active {
+            color: #000;
+            background-color: #fff;
+          }
+          &:hover {
+            color: #000;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .p-projects_contents {
+    .inner-wide {
+      position: relative;
+      background-color: v.$sub-color01;
+    }
+    .project_mv {
+      width: v.pxtovw(1027);
+      aspect-ratio: 1/0.2;
+      position: absolute;
+      top: v.pxtovw(-174);
+      right: v.pxtovw(-40);
+      z-index: 20;
+      img {
+        filter: brightness(0.7);
+      }
+    }
+    .inner {
+      padding: v.pxtovw(90) 0 10rem;
+      position: relative;
+      z-index: 20;
+    }
+    .ttl {
+      position: absolute;
+      top: v.pxtovw(-90);
+      p {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-size: 2rem;
+        span {
+          width: 1.3rem;
+          height: 1px;
+          background-color: #fff;
+        }
+      }
+      h2 {
+        font-size: 8rem;
+        line-height: 1.2;
+        font-weight: 400;
+      }
+    }
+    .postcont {
+      padding-left: v.pxtovw(46);
+      &:not(:has(.first-txt)) {
+        h3 {
+          margin-bottom: 10rem;
+        }
+      }
+      h3 {
+        font-size: 2.4rem;
+        font-weight: 400;
+        padding-bottom: 1.8rem;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-weight: 400;
+        margin-bottom: 2rem;
+        span {
+          font-size: 2.4rem;
+        }
+      }
+      .first-txt {
+        max-width: 96rem;
+        padding-left: 1.5rem;
+        margin-bottom: 10rem;
+      }
+      h4 {
+        width: 90%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        padding: 1.2rem 2rem;
+        background-color: #000;
+        margin-bottom: 4.7rem;
+      }
+      h5 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 1.8rem;
+      }
+      .box {
+        margin-bottom: 8rem;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      .flex {
+        gap: 4rem;
+      }
+      ul {
+        li {
+          position: relative;
+          font-size: 1.5rem;
+          font-weight: 400;
+          margin-bottom: 0.7rem;
+          padding-left: 2rem;
+          &::before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            content: "";
+            width: 0.5rem;
+            aspect-ratio: 1/1;
+            background-color: #fff;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.p-projecrts_press {
+  position: relative;
+  padding: 6.7rem 0 18rem;
+  z-index: 20;
+  .ttl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3d3d3d;
+    padding-bottom: 1.5rem;
+    margin: 0 v.pxtovw(40) 7rem v.pxtovw(120);
+    h2 {
+      font-size: 5.6rem;
+      line-height: 1;
+    }
+    .btn02 {
+      width: 31.3rem;
+      aspect-ratio: 1/0.17;
+    }
+  }
+  .p-projects_swiper {
+    margin-left: v.pxtovw(120);
+    overflow: hidden;
+    .swiper-slide {
+      .img-box {
+        margin-bottom: 1rem;
+      }
+      p {
+        font-weight: 400;
+        margin-bottom: 0.7rem;
+        line-height: 1.5;
+      }
+      .time {
+        text-align: end;
+      }
+    }
+  }
+}
+.p-under {
+  &.common-contact {
+    padding-top: 8rem;
+    background: url(../images/common/common-contact_bg.jpg) no-repeat top/cover;
+    h2 {
+      font-family: v.$font-config;
+      font-size: 5.6rem;
+      font-variation-settings: "slnt" 0, "wdth" 100, "wght" 100;
+      text-align: center;
+      line-height: 1;
+      color: #c7c7c7;
+      margin-bottom: 6.6rem;
+    }
+    .contact_block {
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+      a {
+        aspect-ratio: 1/0.2;
+        svg {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+    .ashirai {
+      position: absolute;
+      &.geo01 {
+        top: -20rem;
+        right: v.pxtovw(-220);
+        width: v.pxtovw(475);
+        opacity: 0.6;
+      }
+      &.geo02 {
+        bottom: -8rem;
+        left: v.pxtovw(-318);
+        width: v.pxtovw(550);
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.produce-animation {
+  .p-projects_contents {
+    .inner {
+      padding: v.pxtovw(175) 0 10rem;
+    }
+    .postcont {
+      .box {
+        .left {
+          width: 29.8rem;
+        }
+        .right {
+          width: calc(100% - 33.8rem);
+        }
+        &:first-of-type {
+          .left {
+            .img-box {
+              aspect-ratio: 1/1.27;
+              img {
+                object-position: top;
+              }
+            }
+          }
+        }
+        &:last-of-type {
+          .left {
+            .img-box {
+              aspect-ratio: 1/1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.new-ip_activity {
+  .p-projects_contents {
+    .inner {
+      padding: v.pxtovw(175) 0 10rem;
+    }
+    .postcont {
+      .box {
+        .left,
+        .right {
+          .img-box {
+            width: 42.4rem;
+            aspect-ratio: 1/0.65;
+          }
+        }
+      }
+    }
+  }
+}
+
+.exosuit-dev {
+  .p-projects_contents {
+    .postcont {
+      .box {
+        .left {
+          .img-box {
+            width: 30rem;
+            aspect-ratio: 1/0.8;
+          }
+        }
+        .right {
+          width: calc(100% - 34rem);
+        }
+      }
+    }
+  }
+}
+
+.fund {
+  .p-projects_contents {
+    .postcont {
+      .img-box {
+        width: 100rem;
+      }
+    }
+  }
+}

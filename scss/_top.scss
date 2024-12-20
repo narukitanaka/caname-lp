@@ -8,6 +8,8 @@ top
   width: 100vw;
   height: 100svh;
   overflow: hidden;
+  background-color: v.$bg-color01;
+  z-index: 20;
   .geometory {
     position: absolute;
     top: v.pxtovw(-165);
@@ -25,7 +27,9 @@ top
 }
 
 .wrap_top-news {
+  position: relative;
   background-color: #fff;
+  z-index: 20;
   .inner-wide {
     position: relative;
   }
@@ -69,7 +73,12 @@ top
 }
 
 .wrap_concept {
+  position: relative;
   padding: 16rem 0 17.5rem;
+  .inner {
+    position: relative;
+    z-index: 20;
+  }
   h1 {
     display: inline-block;
     font-size: 5.6rem;
@@ -109,12 +118,17 @@ top
     letter-spacing: 1px;
     padding-left: 13.7rem;
   }
+  .con-logo {
+    width: v.pxtovw(280);
+    position: absolute;
+    bottom: -45rem;
+    left: v.pxtovw(145);
+  }
 }
 
 .wrap_business {
   position: relative;
   padding: 17.5rem 0 4rem;
-  z-index: 0;
   &::before {
     content: "";
     width: 100%;
@@ -124,6 +138,10 @@ top
     bottom: 0;
     left: 0;
     z-index: -1;
+  }
+  .inner {
+    position: relative;
+    z-index: 20;
   }
   .ttl-wrap {
     margin-bottom: 4rem;
@@ -155,20 +173,24 @@ top
     border-radius: 50%;
     transform: translateX(-50%) scale(0);
     will-change: transform;
-    z-index: -1;
+    z-index: 0;
   }
 }
 
 .wrap_projects {
   position: relative;
   background-color: v.$sub-color01;
-  z-index: 0;
   h2 {
+    position: relative;
     font-size: 18rem;
     line-height: 1;
     opacity: 0.1;
+    z-index: 20;
   }
   .top-pjblock {
+    position: relative;
+    z-index: 20;
+    background-color: v.$sub-color01;
     .left,
     .right {
       flex-basis: 50%;
@@ -290,6 +312,8 @@ top
   position: relative;
   padding: 15rem 0 18.5rem;
   overflow: hidden;
+  background-color: v.$bg-color01;
+  z-index: 20;
   .ttl-posi {
     text-align: end;
     padding-right: v.pxtovw(120);
@@ -363,8 +387,10 @@ top
 }
 
 .wrap_news {
+  position: relative;
   padding: 12rem 0 18rem;
   background-color: #c0c0c0;
+  z-index: 20;
   .inner {
     justify-content: space-between;
   }
@@ -435,8 +461,11 @@ top
 }
 
 .wrap_press {
+  position: relative;
   overflow: hidden;
   padding: 8rem 0 11.5rem;
+  background-color: v.$bg-color01;
+  z-index: 20;
   .top-press_swiper {
     width: 100%;
     .swiper-slide {
@@ -518,7 +547,8 @@ top
 .wrap-company {
   position: relative;
   padding: 11.5rem 0 15rem;
-  z-index: 0;
+  background-color: v.$bg-color01;
+  z-index: 20;
   .ttl-posi {
     text-align: center;
   }
