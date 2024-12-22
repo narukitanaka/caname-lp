@@ -183,12 +183,10 @@ header {
   padding-top: 13rem;
   background-color: v.$bg-color01;
   overflow: scroll;
-  // transform: translateX(100%);
   opacity: 0;
   transition: all 0.3s;
   z-index: 0;
   &.is-megamenu-open {
-    // transform: translateX(0);
     z-index: 998;
     opacity: 1;
   }

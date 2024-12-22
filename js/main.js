@@ -9,7 +9,6 @@ gsap.to(".circle", {
   scrollTrigger: {
     trigger: ".buis-trigger",
     start: "top bottom", // スクロール開始位置
-    // end: "bottom 50%", // スクロール終了位置
     scrub: 1, // スクロールに追従する（1は追従の滑らかさ）
     invalidateOnRefresh: true, // リサイズ時に再計算
   },
@@ -21,15 +20,130 @@ gsap.to(".con-logo", {
   scrollTrigger: {
     trigger: ".con-logo",
     start: "top bottom", // スクロール開始位置
-    // end: "bottom 50%", // スクロール終了位置
     scrub: 1, // スクロールに追従する（1は追従の滑らかさ）
     invalidateOnRefresh: true, // リサイズ時に再計算
   },
 });
 
+// h1のテキストを1文字ずつspanで囲む（brタグを考慮）
+const h1 = document.querySelector(".wrap_concept h1");
+const h1Text = h1.innerHTML;
+// テキストをbrタグで分割して処理
+const lines = h1Text.split(/<br\s*\/?>/);
+const wrappedLines = lines.map((line) => {
+  return line
+    .split("")
+    .map((char) => {
+      if (char.trim() === "") return char; // 空白はそのまま返す
+      return `<span>${char}</span>`;
+    })
+    .join("");
+});
+// brタグを入れて結合
+h1.innerHTML = wrappedLines.join("<br>");
+
+// 概念セクションのアニメーション設定
+const conceptSection = document.querySelector(".wrap_concept");
+// 白いオーバーレイ要素を作成して追加
+const whiteOverlay = document.createElement("div");
+whiteOverlay.className = "white-overlay";
+conceptSection.appendChild(whiteOverlay);
+
+// タイムラインの作成
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: conceptSection,
+    start: "top 50%",
+    once: true,
+  },
+});
+
+// タイムラインにアニメーションを追加
+tl.to(whiteOverlay, {
+  scaleY: 0,
+  duration: 1,
+  ease: "power2.inOut",
+}).from(
+  ".wrap_concept h1 span",
+  {
+    y: 20,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: "power3.out",
+  },
+  "<=0.01"
+); // 白いオーバーレイのアニメーション終了0.３秒前から開始
+
+//コンセプトーテキストフェードイン
+const textElements = document.querySelectorAll(".gsapfadeIn span");
+gsap.from(textElements, {
+  opacity: 0,
+  y: 20,
+  duration: 0.8,
+  stagger: 0.2, // 各要素の開始タイミングをずらす
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".gsapfadeIn",
+    start: "top 60%", // 要素のトップが画面の上から20%の位置に来たとき
+    once: true, // 1回だけ実行
+  },
+});
+
+//順番にフェードイン
+// document.querySelectorAll(".fade_triger").forEach((trigger) => {
+//   gsap.fromTo(
+//     trigger.querySelectorAll(".anime-fade"),
+//     { opacity: 0, y: -10 },
+//     {
+//       opacity: 1,
+//       y: 0,
+//       duration: 0.7,
+//       stagger: 0.3, // 順番にフェードインする間隔
+//       scrollTrigger: {
+//         trigger: trigger,
+//         start: "top 50%",
+//       },
+//     }
+//   );
+// });
+document.querySelectorAll(".topmember-fade_triger").forEach((trigger) => {
+  const elements = trigger.querySelectorAll(".topmember-anime-fade");
+
+  elements.forEach((element, index) => {
+    const isEven = (index + 1) % 2 === 0;
+    const baseY = 20; // 下からフェードインする距離を調整
+    const finalY = isEven ? 68 : 0;
+
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: baseY + (isEven ? 68 : 0), // 初期位置を最終位置からの相対位置に
+      },
+      {
+        opacity: 1,
+        y: finalY,
+        duration: 1, // アニメーション時間を少し長く
+        delay: index * 0.2, // 遅延時間を少し短く
+        ease: "power2.out", // よりなめらかなイージング
+        scrollTrigger: {
+          trigger: trigger,
+          start: "top 60%", // トリガー位置を少し下に
+          toggleActions: "play none none reverse", // スクロール戻したときの動作を設定
+        },
+      }
+    );
+  });
+});
+
 ///////////////////////////////////////////
 //ハンバーガーメニュー
 //////////////////////////////////////////
+gsap.set(".ham-manulist", {
+  y: 20,
+  opacity: 0,
+});
 $(".hambager").on("click", function () {
   navOpen();
 });
@@ -38,12 +152,23 @@ function navOpen() {
   if (!navFlg) {
     $(".hamberger-wrap").addClass("is-ham-open");
     $(".mega-menu").addClass("is-megamenu-open");
-    $("header").addClass("is-megamenu-header");
+    setTimeout(() => {
+      gsap.to(".ham-manulist", {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        stagger: 0.1,
+        ease: "power3.out",
+      });
+    }, 300);
     navFlg = true;
   } else {
     $(".hamberger-wrap").removeClass("is-ham-open");
     $(".mega-menu").removeClass("is-megamenu-open");
-    $("header").removeClass("is-megamenu-header");
+    gsap.set(".ham-manulist", {
+      y: 20,
+      opacity: 0,
+    });
     navFlg = false;
   }
 }

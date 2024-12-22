@@ -71,8 +71,8 @@
         <div class="nav-area">
           <nav>
             <ul>
-              <li><a href="./">Home</a></li>
-              <li>
+              <li class="ham-manulist"><a href="./">Home</a></li>
+              <li class="ham-manulist">
                 <a class="parent">
                   XBP Projects
                   <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,10 +88,10 @@
                   <div><a href="project05.html">ファンド</a></div>
                 </div>
               </li>
-              <li><a href="members.html">Members</a></li>
-              <li><a href="archive_news.html">News</a></li>
-              <li><a href="archive_press.html">Press Release</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li class="ham-manulist"><a href="members.html">Members</a></li>
+              <li class="ham-manulist"><a href="archive_news.html">News</a></li>
+              <li class="ham-manulist"><a href="archive_press.html">Press Release</a></li>
+              <li class="ham-manulist"><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -140,7 +140,7 @@
       </div><!-- /.wrap_top-news -->
 
 
-      <section class="wrap_concept buis-trigger">
+      <section id="concept" class="wrap_concept buis-trigger">
         <div class="inner">
           <h1>
             創造の<br>
@@ -152,16 +152,16 @@
               <div class="num"><span class="line"></span>01</div>
               <h2>Concept</h2>
             </div>
-            <p>
-              未知の可能性が、形になる。<br>
-              その最初のきっかけは、いつも人間の想像力。<br>
-              エンタメが刺激した夢が、テクノロジーのビジョンを作り、<br>
-              テクノロジーが切り拓いた可能性が、エンタメに新たな表現をもたらしてきた。<br>
+            <p class="gsapfadeIn">
+              <span>未知の可能性が、形になる。</span><br>
+              <span>その最初のきっかけは、いつも人間の想像力。</span><br>
+              <span>エンタメが刺激した夢が、テクノロジーのビジョンを作り、</span><br>
+              <span>テクノロジーが切り拓いた可能性が、エンタメに新たな表現をもたらしてきた。</span><br>
               <br>
-              一つの会社のなかで、そのサイクルを作れたら。<br>
-              エンタメとテクノロジーを両輪に、固定観念に囚われず、<br>
-              新しい発想を形にしていく。どんな空想も、現実にしてみせる。<br>
-              それが私たちXBP Inc.の存在理由です。
+              <span>一つの会社のなかで、そのサイクルを作れたら。</span><br>
+              <span>エンタメとテクノロジーを両輪に、固定観念に囚われず、</span><br>
+              <span>新しい発想を形にしていく。どんな空想も、現実にしてみせる。</span><br>
+              <span>それが私たちXBP Inc.の存在理由です。</span>
             </p>
           </div>
         </div>
@@ -169,7 +169,7 @@
       </section><!-- /.wrap_concept -->
 
 
-      <section class="wrap_business">
+      <section id="business" class="wrap_business">
         <div class="inner">
           <div class="ttl-wrap">
             <div class="num"><span class="line"></span>02</div>
@@ -181,13 +181,13 @@
             これまでエンタメの世界だけに存在するものだと思われていたアイディアを、テクノロジーで実現する。<br>
             そして、テクノロジーが切り拓いた未知の世界、そこから生まれる気概を、また新しいエンタメ表現へと転換し、進化し続けます。
           </p>
-          <div class="img-box"><img src="images/common/business_img01.png" alt=""></div>
+          <div class="img-box fadeIn"><img src="images/common/business_img01.png" alt=""></div>
         </div>
         <div class="circle"></div>
       </section><!-- /.wrap_business -->
 
 
-      <section class="wrap_projects">
+      <section id="projects" class="wrap_projects">
         <h2 class="config con-el">XBP Projects</h2>
         <div class="top-pjblock flex">
 
@@ -303,30 +303,30 @@
               <h2>Members</h2>
             </div>
           </div>
-          <div class="top-memblock flex">
+          <div class="top-memblock flex topmember-fade_triger">
             <div class="left flex">
-              <div class="img-box obj-fit member">
+              <div class="img-box obj-fit member topmember-anime-fade">
                 <img src="images/members/members_kawabe.jpg" alt="川邊 晃">
                 <p>
                   川邊 晃<br>
                   <span class="config con-l">Akira Kawabe</span>
                 </p>
               </div><!-- /.member -->
-              <div class="img-box obj-fit member">
+              <div class="img-box obj-fit member topmember-anime-fade">
                 <img src="images/members/members_saeki.jpg" alt="佐伯 まいこ">
                 <p>
                   佐伯 まいこ<br>
                   <span class="config con-l">Maiko Saeki</span>
                 </p>
               </div><!-- /.member -->
-              <div class="img-box obj-fit member">
+              <div class="img-box obj-fit member topmember-anime-fade">
                 <img src="images/members/members_mori.jpg" alt="森 陽平">
                 <p>
                   森 陽平<br>
                   <span class="config con-l">Youhei Mori</span>
                 </p>
               </div><!-- /.member -->
-              <div class="img-box obj-fit member">
+              <div class="img-box obj-fit member topmember-anime-fade">
                 <img src="images/members/members_hujii.jpg" alt="藤井・Jack・考騎">
                 <p>
                   藤井・Jack・考騎<br>
@@ -343,7 +343,7 @@
                 それぞれが持つ好奇心こそが、XBPの活力です。
               </p>
               <div class="btn-wrap">
-                <a href="#" class="btn01">
+                <a href="members.html" class="btn01">
                   view All
                   <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
@@ -365,7 +365,7 @@
               <div class="num"><span class="line"></span>04</div>
               <h2>News</h2>
             </div>
-            <a href="#" class="btn01">
+            <a href="archive_news.html" class="btn01">
               view All
               <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
@@ -375,7 +375,7 @@
           </div><!-- /.left -->
           <div class="right">
             <dl>
-              <a href="#">
+              <a href="single_news.html">
                 <dt class="config con-l">2025.01.11</dt>
                 <dd>投稿タイトルが入ります。テキストテキストテキストテキスト</dd>
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -385,7 +385,7 @@
               </a>
             </dl>
             <dl>
-              <a href="#">
+              <a href="single_news.html">
                 <dt class="config con-l">2025.01.11</dt>
                 <dd>投稿タイトルが入ります。テキストテキストテキストテキスト</dd>
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -395,7 +395,7 @@
               </a>
             </dl>
             <dl>
-              <a href="#">
+              <a href="single_news.html">
                 <dt class="config con-l">2025.01.11</dt>
                 <dd>投稿タイトルが入ります。テキストテキストテキストテキスト</dd>
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -413,7 +413,7 @@
         <div class="top-press_swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="#">
+              <a href="single_press.html">
                 <div class="img-box obj-fit"><img src="images/common/press_dammy01.jpg" alt=""></div>
                 <div class="contents">
                   <div class="cate">#Category</div>
@@ -423,7 +423,7 @@
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="#">
+              <a href="single_press.html">
                 <div class="img-box obj-fit"><img src="images/common/press_dammy02.jpg" alt=""></div>
                 <div class="contents">
                   <div class="cate">#Category</div>
@@ -433,7 +433,7 @@
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="#">
+              <a href="single_press.html">
                 <div class="img-box obj-fit"><img src="images/common/press_dammy03.jpg" alt=""></div>
                 <div class="contents">
                   <div class="cate">#Category</div>
@@ -450,7 +450,7 @@
             <div class="num"><span class="line"></span>05</div>
           </div>
         </div>
-        <a href="#" class="btn02">
+        <a href="archive_press.html" class="btn02">
           view All
           <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
@@ -485,7 +485,7 @@
               </td>
             </tr>
           </table>
-          <a href="#" class="btn01">
+          <a href="company.html" class="btn01">
             view More
             <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
@@ -505,7 +505,7 @@
               </a>
             </div> -->
             <div class="mail">
-              <a href="#">
+              <a href="contact.html">
                 Contact us
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle class="circle-s" cx="10.5" cy="10.5" r="10" stroke="black" />
@@ -526,13 +526,13 @@
       <div class="logo img-box"><img src="images/common/logo.svg" alt=""></div>
       <nav>
         <ul class="flex">
-          <li><a href="#">Concept</a></li>
-          <li><a href="#">Business</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Members</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Pless Rerease</a></li>
-          <li><a href="#">Company</a></li>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#business">Business</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="archive_news.html">News</a></li>
+          <li><a href="archive_press.html">Pless Rerease</a></li>
+          <li><a href="company.html">Company</a></li>
         </ul>
       </nav>
       <div class="footer-bottom flex">
