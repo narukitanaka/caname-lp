@@ -15,6 +15,18 @@ gsap.to(".circle", {
   },
 });
 
+gsap.to(".con-logo", {
+  y: -500,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".con-logo",
+    start: "top bottom", // スクロール開始位置
+    // end: "bottom 50%", // スクロール終了位置
+    scrub: 1, // スクロールに追従する（1は追従の滑らかさ）
+    invalidateOnRefresh: true, // リサイズ時に再計算
+  },
+});
+
 ///////////////////////////////////////////
 //ハンバーガーメニュー
 //////////////////////////////////////////
@@ -51,26 +63,6 @@ $(document).ready(function () {
     $(this).next(".little-nav").slideToggle(300);
   });
 });
-
-////////////////////////////////////////////
-//メインビジュアルを過ぎたらheaderが固定表示される
-///////////////////////////////////////////
-// const fixedheader = document.querySelector(".header");
-// // スクロールイベントリスナーを追加
-// window.addEventListener("scroll", () => {
-//   //.mv要素のトップ位置と高さを取得
-//   const mvElement = document.querySelector(".mv");
-//   const mvElementTop = mvElement.getBoundingClientRect().top + window.scrollY;
-//   const mvElementHeight = mvElement.offsetHeight;
-//   // 現在のスクロール位置を取得
-//   const scrollPosition = window.scrollY;
-//   // スクロール位置が.mv要素の一番下を過ぎた場合にボタンを表示
-//   if (scrollPosition > mvElementTop + mvElementHeight) {
-//     fixedheader.classList.add("fixed-active");
-//   } else {
-//     fixedheader.classList.remove("fixed-active");
-//   }
-// });
 
 ///////////////////////////////////////////
 //スクロールフェードイン
@@ -172,5 +164,57 @@ document.addEventListener("DOMContentLoaded", (event) => {
         slidesPerView: 2,
       },
     },
+  });
+});
+
+//////////////////////////////////////////////////////////////////////////////
+//Top - XBP Projects　ホバー切り替え
+//////////////////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+  const imgBox = document.querySelector(".top-pjblock .left .img-box img");
+  const txtBox = document.querySelector(".top-pjblock .left .txt p");
+
+  // デフォルト値を保存
+  const defaultImage = document.querySelector(".top-pjblock .left .img-box")
+    .dataset.defaultImage;
+  const defaultText = document.querySelector(".top-pjblock .left .txt").dataset
+    .defaultText;
+
+  // 各プロジェクトセレクターにホバーイベントを追加
+  document.querySelectorAll(".pj-select").forEach((selector) => {
+    selector.addEventListener("mouseenter", function () {
+      const projectImage = this.dataset.image;
+      const projectText = this.dataset.text;
+
+      // フェードアウト
+      imgBox.style.opacity = 0;
+      txtBox.style.opacity = 0;
+
+      // 0.1秒後に新しいコンテンツをセット
+      setTimeout(() => {
+        imgBox.src = projectImage;
+        txtBox.textContent = projectText;
+
+        // フェードイン
+        imgBox.style.opacity = 1;
+        txtBox.style.opacity = 1;
+      }, 100);
+    });
+
+    selector.addEventListener("mouseleave", function () {
+      // フェードアウト
+      imgBox.style.opacity = 0;
+      txtBox.style.opacity = 0;
+
+      // 0.1秒後にデフォルトコンテンツに戻す
+      setTimeout(() => {
+        imgBox.src = defaultImage;
+        txtBox.textContent = defaultText;
+
+        // フェードイン
+        imgBox.style.opacity = 1;
+        txtBox.style.opacity = 1;
+      }, 100);
+    });
   });
 });

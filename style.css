@@ -392,7 +392,7 @@ input[type=button]:focus {
 header
 *************************************************/
 header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   padding-left: 2.7777777778vw;
   z-index: 999;
@@ -946,6 +946,8 @@ top
 .wrap_projects .top-pjblock .left .img-box {
   width: 100%;
   aspect-ratio: 1/0.94;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 .wrap_projects .top-pjblock .left .img-box img {
   filter: brightness(0.6);
@@ -956,6 +958,8 @@ top
   left: 0;
   padding: 3.3rem 2.7777777778vw 1.5rem;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 .wrap_projects .top-pjblock .right {
   padding-left: 5rem;

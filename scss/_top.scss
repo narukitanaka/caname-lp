@@ -201,6 +201,8 @@ top
       .img-box {
         width: 100%;
         aspect-ratio: 1/0.94;
+        opacity: 1;
+        transition: opacity 0.3s ease;
         img {
           filter: brightness(0.6);
         }
@@ -211,6 +213,8 @@ top
         left: 0;
         padding: 3.3rem v.pxtovw(40) 1.5rem;
         background-color: rgba(#000, 0.5);
+        opacity: 1;
+        transition: opacity 0.3s ease;
       }
     }
     .right {
