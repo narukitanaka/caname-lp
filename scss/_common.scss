@@ -178,7 +178,8 @@ a {
   margin: 0 auto;
   .tel,
   .mail {
-    flex-basis: 48%;
+    // flex-basis: 48%;
+    width: 100%;
     p {
       font-weight: 400;
       letter-spacing: 1px;
@@ -191,30 +192,33 @@ a {
       align-items: center;
       justify-content: center;
       width: 100%;
-      aspect-ratio: 1/0.29;
+      aspect-ratio: 1/0.17;
       font-size: 2.6rem;
       font-family: v.$font-config;
       font-variation-settings: "slnt" 0, "wdth" 100, "wght" 300;
       border: 1px solid #fff;
       svg {
+        width: 3.5rem;
+        height: 3.5rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
       }
     }
   }
-  .tel {
-    a {
-      svg {
-        left: 4rem;
-        rotate: 15deg;
-      }
-    }
-  }
+  // .tel {
+  //   a {
+  //     svg {
+  //       left: 4rem;
+  //       rotate: 15deg;
+  //     }
+  //   }
+  // }
   .mail {
     a {
+      font-size: 3.2rem;
       svg {
-        right: 4rem;
+        right: 8rem;
         .circle-s {
           stroke: #fff;
           transition: all 0.3s;
@@ -268,6 +272,20 @@ a {
     .arrow-f {
       fill: #fff;
       transition: all 0.3s;
+    }
+  }
+}
+
+.h-scale {
+  .img-box {
+    overflow: hidden;
+  }
+  img {
+    transition: all 0.3s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
     }
   }
 }

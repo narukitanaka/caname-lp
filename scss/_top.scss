@@ -98,7 +98,8 @@ top
   .ttl-wrap {
     margin-bottom: 16.5rem;
     &::before {
-      width: v.pxtovw(482);
+      // width: v.pxtovw(482);
+      width: 48.2rem;
       background-color: #fff;
       right: -55rem;
       bottom: 1.2rem;
@@ -322,7 +323,7 @@ top
     margin-bottom: 5.2rem;
     text-align: start;
     &::before {
-      width: v.pxtovw(633);
+      width: 63.3rem;
       background-color: #fff;
       left: -71.7rem;
     }
@@ -424,7 +425,7 @@ top
   }
   .right {
     padding-top: 1.4rem;
-    width: v.pxtovw(857);
+    width: 85.7rem;
     dl {
       border-bottom: 0.5px solid #000;
       a {
@@ -495,6 +496,7 @@ top
         aspect-ratio: 1/0.73;
       }
       .contents {
+        width: 100%;
         position: absolute;
         bottom: 0;
         left: 0;

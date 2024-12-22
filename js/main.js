@@ -42,6 +42,16 @@ $('.mega-menu a[href^="#"]').on("click", function () {
   }
 });
 
+//ハンバーガーメニュー アコーディオン
+///////////////////////////////////////////
+$(document).ready(function () {
+  $(".little-nav").hide();
+  $(".nav-area .parent").on("click", function () {
+    $(this).toggleClass("active");
+    $(this).next(".little-nav").slideToggle(300);
+  });
+});
+
 ////////////////////////////////////////////
 //メインビジュアルを過ぎたらheaderが固定表示される
 ///////////////////////////////////////////
@@ -136,6 +146,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
         this.params.loopedSlides = document.querySelectorAll(
           ".p-projects_swiper .swiper-slide"
         ).length;
+      },
+    },
+  });
+  //文字の無限スライダー
+  const swiperText = new Swiper(".member_txtslider", {
+    loop: true,
+    slidesPerView: 0.8,
+    speed: 40000,
+    allowTouchMove: false,
+    spaceBetween: 50,
+    freeMode: {
+      enabled: true,
+      momentum: false,
+      sticky: true,
+    },
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    direction: "horizontal",
+    effect: "slide",
+    breakpoints: {
+      769: {
+        slidesPerView: 2,
       },
     },
   });
