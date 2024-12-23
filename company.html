@@ -49,6 +49,14 @@
 
   <div class="wrap-hidden">
 
+    <div class="transition-container">
+      <div class="transition-panel panel1"></div>
+      <div class="transition-panel panel2"></div>
+      <div class="transition-panel panel3"></div>
+      <div class="transition-panel panel4"></div>
+      <div class="transition-panel panel5"></div>
+    </div>
+
     <header class="header">
       <div class="header-inner flex">
         <div class="logo img-box"><a href="./"><img src="images/common/logo.svg" alt=""></a></div>
@@ -135,7 +143,12 @@
               あらゆる既存の境界を拡張し、新たな地平を切り開く。
             </h3>
             <div class="content">
-              <div class="img-box fig"><img src="images/common/p-company_img01.png" alt=""></div>
+              <div class="img-box fig">
+                <picture>
+                  <source srcset="images/common/p-company_img01_sp.png" media="(max-width: 768px)">
+                  <img src="images/common/p-company_img01.png" alt="">
+                </picture>
+              </div>
               <div class="img-box xbp-logo"><img src="images/common/logo02_a.svg" alt=""></div>
               <p class="txt">
                 想像のボーダーラインを広げるのは純粋な好奇心。<br>
@@ -214,17 +227,17 @@
       <div class="logo img-box"><img src="images/common/logo.svg" alt=""></div>
       <nav>
         <ul class="flex">
-          <li><a href="#">Concept</a></li>
-          <li><a href="#">Business</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Members</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Pless Rerease</a></li>
-          <li><a href="#">Company</a></li>
+          <li><a href="index.html#concept">Concept</a></li>
+          <li><a href="index.html#business">Business</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="archive_news.html">News</a></li>
+          <li><a href="archive_press.html">Pless Rerease</a></li>
+          <li><a href="company.html">Company</a></li>
         </ul>
       </nav>
       <div class="footer-bottom flex">
-        <a href="#">プライバシーポリシー</a>
+        <a href="policy.html">プライバシーポリシー</a>
         <p><small class="config con-l">© XPB Inc. all rights reserved.</small></p>
       </div>
     </footer>

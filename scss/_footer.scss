@@ -10,9 +10,16 @@ footer {
   padding: 3.2rem v.pxtovw(40) 1.3rem;
   .logo {
     width: 31rem;
+    @include c.mq() {
+      width: 12.5rem;
+      margin-bottom: 6.5rem;
+    }
   }
   nav {
     margin-bottom: 2.5rem;
+    @include c.mq() {
+      display: none;
+    }
     ul {
       justify-content: flex-end;
       gap: 2rem;
@@ -31,10 +38,18 @@ footer {
     align-items: center;
     justify-content: flex-end;
     gap: 2.8rem;
+    @include c.mq() {
+      flex-direction: column;
+      gap: 5px;
+      align-items: end;
+    }
     p {
       font-size: 1rem;
       small {
         font-size: 1.1rem;
+        @include c.mq() {
+          font-size: 1.4rem;
+        }
       }
     }
   }

@@ -15,6 +15,10 @@ header {
   .logo {
     width: 10rem;
     margin-top: 1rem;
+    @include c.mq() {
+      width: 7.5rem;
+      margin-top: 0;
+    }
   }
   .lang-wrap {
     background-color: #fff;
@@ -36,6 +40,10 @@ header {
       .c-line {
         &:first-of-type {
           animation: line1-open var(--navTransition) forwards;
+          @include c.mq() {
+            width: 3rem;
+            left: 1rem;
+          }
         }
         &:nth-of-type(2) {
           animation: line2-open var(--navTransition) forwards;
@@ -43,6 +51,9 @@ header {
         &:last-of-type {
           width: 4rem;
           animation: line3-open var(--navTransition) forwards;
+          @include c.mq() {
+            width: 3rem;
+          }
         }
       }
     }
@@ -50,8 +61,6 @@ header {
 }
 .hambager-content {
   position: relative;
-  // width: 4rem;
-  // height: 1.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,6 +195,9 @@ header {
   opacity: 0;
   transition: all 0.3s;
   z-index: 0;
+  @include c.mq() {
+    padding-top: 10rem;
+  }
   &.is-megamenu-open {
     z-index: 998;
     opacity: 1;
@@ -197,17 +209,27 @@ header {
   p {
     &:has(small) {
       text-align: end;
+      @include c.mq() {
+        text-align: center;
+      }
     }
   }
   .access {
     position: absolute;
     top: 8rem;
     right: 0;
+    @include c.mq() {
+      position: static;
+      margin-bottom: 6rem;
+    }
     div {
       font-size: 2rem;
     }
     p {
       margin-bottom: 1rem;
+      @include c.mq() {
+        line-height: 1.5;
+      }
     }
     a {
       display: flex;
@@ -221,14 +243,25 @@ header {
     position: absolute;
     top: 30rem;
     right: -16rem;
+    @include c.mq() {
+      width: v.pxtovw_sp(120);
+      top: 8rem;
+      right: 1.5rem;
+    }
   }
   .nav-area {
     margin-bottom: 6rem;
+    @include c.mq() {
+      margin-bottom: 4rem;
+    }
     nav {
       ul {
         max-width: 65rem;
         li {
           margin-bottom: 1.5rem;
+          @include c.mq() {
+            margin-bottom: 1rem;
+          }
           &:first-of-type {
             margin-bottom: 2rem;
             a {
@@ -236,6 +269,9 @@ header {
               color: #0a0a0a;
               text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
               border-bottom: 1px solid #fff;
+              @include c.mq() {
+                font-size: 3.2rem;
+              }
             }
           }
           a {
@@ -247,6 +283,10 @@ header {
             line-height: 1.7;
             font-variation-settings: "slnt" 0, "wdth" 100, "wght" 500;
             transition: all 0.3s;
+            @include c.mq() {
+              font-size: 3.2rem;
+              justify-content: space-between;
+            }
             svg {
               rotate: 90deg;
               .circle-s {
@@ -264,6 +304,9 @@ header {
             flex-wrap: wrap;
             padding-left: 2.5rem;
             margin-bottom: 2rem;
+            @include c.mq() {
+              column-gap: 4rem;
+            }
             div {
               position: relative;
               &::before {
@@ -275,9 +318,16 @@ header {
                 position: absolute;
                 top: 3px;
                 right: -2.5rem;
+                @include c.mq() {
+                  height: 1.5rem;
+                  right: -1.8rem;
+                }
               }
               a {
                 font-size: 2rem;
+                @include c.mq() {
+                  font-size: 1.5rem;
+                }
               }
             }
           }

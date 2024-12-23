@@ -15,6 +15,14 @@ top
     top: v.pxtovw(-165);
     right: v.pxtovw(-544);
     width: v.pxtovw(1616);
+    opacity: 0.8;
+    @include c.mq() {
+      top: auto;
+      bottom: v.pxtovw_sp(-97);
+      right: v.pxtovw_sp(-277);
+      width: v.pxtovw_sp(676);
+      opacity: 0.4;
+    }
   }
   p {
     position: absolute;
@@ -23,6 +31,13 @@ top
     font-size: 1.6rem;
     letter-spacing: 1px;
     line-height: 2.2;
+    @include c.mq() {
+      font-size: 1.4rem;
+      left: v.pxtovw_sp(15);
+      bottom: auto;
+      top: v.pxtovw_sp(120);
+      letter-spacing: 0.5px;
+    }
   }
 }
 
@@ -41,11 +56,46 @@ top
     display: flex;
     align-items: center;
     padding: 1.8rem 0;
+    @include c.mq() {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.4rem 0;
+    }
   }
-  div {
-    position: relative;
+  .cont {
+    .time-wrap {
+      @include c.mq() {
+        position: absolute;
+        top: 2rem;
+        right: 0;
+      }
+    }
+  }
+  .ttl {
     font-size: 2rem;
     margin-right: v.pxtovw(72);
+  }
+  p {
+    font-weight: 300;
+  }
+  .txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 85%;
+    @include c.mq() {
+      font-weight: 400;
+    }
+  }
+  .time {
+    position: relative;
+    font-size: 1.6rem;
+    margin-right: 4.1rem;
+    @include c.mq() {
+      font-size: 1.4rem;
+      margin-right: 0;
+    }
     &::before {
       content: "";
       width: 1.7rem;
@@ -54,14 +104,7 @@ top
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: 8.5rem;
-    }
-  }
-  p {
-    font-weight: 300;
-    span {
-      font-size: 1.6rem;
-      margin-right: 4.1rem;
+      left: -4rem;
     }
   }
   svg {
@@ -69,6 +112,9 @@ top
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+    @include c.mq() {
+      display: none;
+    }
   }
 }
 
@@ -85,9 +131,17 @@ top
 .wrap_concept {
   position: relative;
   padding: 16rem 0 17.5rem;
+  @include c.mq() {
+    padding: 8rem 0 10rem;
+  }
   .inner {
     position: relative;
     z-index: 20;
+  }
+  .catch-wrap {
+    @include c.mq() {
+      text-align: end;
+    }
   }
   h1 {
     display: inline-block;
@@ -100,6 +154,11 @@ top
     // -webkit-text-fill-color: transparent;
     // background-clip: text;
     // text-fill-color: transparent;
+    @include c.mq() {
+      font-size: 3.2rem;
+      margin-bottom: 5.5rem;
+      text-align: left;
+    }
     span {
       display: inline-block;
     }
@@ -107,15 +166,26 @@ top
   .contents {
     margin-top: v.pxtovw(-53);
     padding-left: v.pxtovw(400);
+    @include c.mq() {
+      margin-top: 0;
+      padding-left: 0;
+    }
   }
   .ttl-wrap {
     margin-bottom: 16.5rem;
+    @include c.mq() {
+      margin-bottom: 4rem;
+    }
     &::before {
-      // width: v.pxtovw(482);
       width: 48.2rem;
       background-color: #fff;
       right: -55rem;
       bottom: 1.2rem;
+      @include c.mq() {
+        width: 19rem;
+        right: -22rem;
+        bottom: 0.8rem;
+      }
     }
     .num {
       .line {
@@ -124,6 +194,9 @@ top
     }
     h2 {
       font-size: 5.6rem;
+      @include c.mq() {
+        font-size: 3.2rem;
+      }
     }
   }
   p {
@@ -131,18 +204,30 @@ top
     line-height: 3.8;
     letter-spacing: 1px;
     padding-left: 13.7rem;
+    @include c.mq() {
+      line-height: 2;
+      padding-left: 0;
+    }
   }
   .con-logo {
     width: v.pxtovw(280);
     position: absolute;
     bottom: -45rem;
     left: v.pxtovw(145);
+    @include c.mq() {
+      width: v.pxtovw_sp(394);
+      bottom: -18rem;
+      left: v.pxtovw_sp(18);
+    }
   }
 }
 
 .wrap_business {
   position: relative;
   padding: 17.5rem 0 4rem;
+  @include c.mq() {
+    padding: 10rem 0 2rem;
+  }
   &::before {
     content: "";
     width: 100%;
@@ -152,6 +237,9 @@ top
     bottom: 0;
     left: 0;
     z-index: -1;
+    @include c.mq() {
+      height: 400px;
+    }
   }
   .inner {
     position: relative;
@@ -163,6 +251,11 @@ top
       width: v.pxtovw(800);
       background-color: #fff;
       right: -89.4rem;
+      @include c.mq() {
+        width: 18rem;
+        right: -21rem;
+        bottom: 0.8rem;
+      }
     }
     .num {
       .line {
@@ -172,10 +265,17 @@ top
   }
   p {
     margin-bottom: 6rem;
+    @include c.mq() {
+      margin-bottom: 2.3rem;
+    }
   }
   .img-box {
     width: v.pxtovw(650);
     margin: 0 auto;
+    @include c.mq() {
+      width: 100%;
+      max-width: 40rem;
+    }
   }
   .circle {
     position: absolute;
@@ -188,6 +288,10 @@ top
     transform: translateX(-50%) scale(0);
     will-change: transform;
     z-index: 0;
+    @include c.mq() {
+      width: v.pxtovw_sp(500);
+      top: 4rem;
+    }
   }
 }
 
@@ -200,6 +304,9 @@ top
     line-height: 1;
     opacity: 0.1;
     z-index: 20;
+    @include c.mq() {
+      font-size: 6rem;
+    }
   }
   .top-pjblock {
     position: relative;
@@ -262,6 +369,8 @@ top
               color: #fff;
             }
             svg {
+              scale: 1.4;
+              rotate: 360deg;
               .circle-s {
                 stroke: #000;
               }
@@ -312,6 +421,7 @@ top
           transition: all 0.3s;
         }
         svg {
+          transition: all 0.3s;
           .circle-s {
             stroke: #fff;
             transition: all 0.3s;
@@ -319,6 +429,70 @@ top
           .arrow-f {
             fill: #fff;
             transition: all 0.3s;
+          }
+        }
+      }
+    }
+  }
+  .top-pjblock_sp {
+    @include c.mq() {
+      position: relative;
+      z-index: 20;
+      .pj-select {
+        position: relative;
+        .img-box {
+          width: 100%;
+          aspect-ratio: 1/0.5;
+          img {
+            filter: brightness(0.7);
+          }
+        }
+        .type {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: #000;
+          width: 10.7rem;
+          font-size: 1.3rem;
+          line-height: 1.4;
+          text-align: center;
+          padding: 8px 0 5px;
+        }
+        .name {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 1.5rem v.pxtovw_sp(15);
+          background-color: rgba($color: #000000, $alpha: 0.4);
+          .config {
+            display: flex;
+            align-items: center;
+            span {
+              display: inline-block;
+              width: 8px;
+              height: 0.5px;
+              background-color: #fff;
+              margin-right: 1rem;
+            }
+          }
+          .anona {
+            font-size: 2rem;
+            line-height: 1.4;
+          }
+        }
+        svg {
+          position: absolute;
+          bottom: 1.5rem;
+          right: v.pxtovw_sp(15);
+          .circle-s {
+            stroke: #fff;
+          }
+          .arrow-f {
+            fill: #fff;
           }
         }
       }
@@ -332,17 +506,30 @@ top
   overflow: hidden;
   background-color: v.$bg-color01;
   z-index: 20;
+  @include c.mq() {
+    padding: 9rem 0 10rem;
+  }
   .ttl-posi {
     text-align: end;
     padding-right: v.pxtovw(120);
+    @include c.mq() {
+      padding-right: 0;
+    }
   }
   .ttl-wrap {
     margin-bottom: 5.2rem;
     text-align: start;
+    @include c.mq() {
+      margin-bottom: 4rem;
+    }
     &::before {
       width: 63.3rem;
       background-color: #fff;
       left: -71.7rem;
+      @include c.mq() {
+        width: 19rem;
+        left: -21rem;
+      }
     }
     .num {
       margin-left: 0.7rem;
@@ -353,15 +540,28 @@ top
   }
   .top-memblock {
     gap: 8rem;
+    @include c.mq() {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
     .left {
       width: 57.3rem;
       flex-wrap: wrap;
       column-gap: 3rem;
       row-gap: 4.5rem;
+      @include c.mq() {
+        width: 100%;
+        column-gap: 1.5rem;
+        row-gap: 2.8rem;
+      }
       .img-box {
         position: relative;
         width: calc((100% / 2) - 1.5rem);
         aspect-ratio: 1/1.24;
+        @include c.mq() {
+          width: 16rem;
+          aspect-ratio: 1/1.21;
+        }
         img {
           filter: brightness(0.8);
         }
@@ -373,34 +573,66 @@ top
           right: 0;
           background-color: rgba(#000, 0.85);
           line-height: 1.4;
+          @include c.mq() {
+            width: 10rem;
+            padding: 1rem 0 1rem 1rem;
+            text-align: left;
+            right: auto;
+            left: 0;
+            font-size: 1.2rem;
+          }
           span {
             font-size: 1.3rem;
             letter-spacing: 0.5px;
+            @include c.mq() {
+              font-size: 1.2rem;
+            }
           }
         }
         &:nth-of-type(even) {
           transform: translateY(68px);
+          @include c.mq() {
+            transform: translateY(4rem);
+          }
         }
       }
     }
     .right {
       padding-top: 14.6rem;
+      @include c.mq() {
+        padding-top: 0;
+      }
       p {
         line-height: 2.2;
         margin-bottom: 8rem;
+        @include c.mq() {
+          margin-bottom: 6rem;
+        }
       }
       .btn-wrap {
         display: flex;
         justify-content: end;
+        @include c.mq() {
+          position: absolute;
+          bottom: 10rem;
+          right: v.pxtovw_sp(44);
+        }
       }
     }
   }
   .ashirai {
     width: v.pxtovw(1180);
+    max-width: 140rem;
     position: absolute;
     right: v.pxtovw(-485);
     bottom: v.pxtovw(-306);
     opacity: 0.6;
+    @include c.mq() {
+      width: v.pxtovw_sp(500);
+      right: v.pxtovw_sp(-250);
+      bottom: v.pxtovw_sp(-114);
+      opacity: 0.4;
+    }
   }
 }
 
@@ -409,12 +641,21 @@ top
   padding: 12rem 0 18rem;
   background-color: #c0c0c0;
   z-index: 20;
+  @include c.mq() {
+    padding: 6rem 0 16.5rem;
+  }
   .inner {
     justify-content: space-between;
+    @include c.mq() {
+      flex-direction: column;
+    }
   }
   .left {
     .ttl-wrap {
       margin-bottom: 3rem;
+      @include c.mq() {
+        margin-bottom: 1rem;
+      }
       .num,
       h2 {
         color: #000;
@@ -425,9 +666,38 @@ top
         }
       }
     }
+    .btn-wrap {
+      @include c.mq() {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 6rem;
+      }
+      @include c.mq() {
+        .btn01 {
+          position: relative;
+          width: 24.5rem;
+          aspect-ratio: 1/0.2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #000;
+          svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 2rem;
+          }
+        }
+      }
+    }
     .btn01 {
       color: #000;
       margin-left: 1rem;
+      &::after {
+        max-width: 16rem;
+        background-color: #000;
+      }
       svg {
         .circle-s {
           stroke: #000;
@@ -443,6 +713,9 @@ top
   .right {
     padding-top: 1.4rem;
     width: 85.7rem;
+    @include c.mq() {
+      width: 100%;
+    }
     dl {
       border-bottom: 0.5px solid #000;
       a {
@@ -450,20 +723,40 @@ top
         display: flex;
         gap: 3rem;
         padding: 5.4rem 0 3.7rem;
+        @include c.mq() {
+          gap: 1rem;
+          flex-direction: column;
+          padding: 2rem 0 1rem;
+        }
         dt {
           padding-top: 3px;
           text-align: center;
-          width: 9rem;
+          width: 8rem;
           background-color: #313131;
+          @include c.mq() {
+            font-size: 1.1rem;
+          }
         }
         dd {
           color: #000;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          @include c.mq() {
+            padding-right: 4rem;
+          }
         }
         svg {
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
           right: 4rem;
+          @include c.mq() {
+            top: auto;
+            bottom: 0.7rem;
+            transform: auto;
+            right: 0;
+          }
           .circle-s {
             stroke: #000;
             transition: all 0.3s;
@@ -484,25 +777,50 @@ top
   padding: 8rem 0 11.5rem;
   background-color: v.$bg-color01;
   z-index: 20;
+  @include c.mq() {
+    padding: 9rem 0 2rem;
+  }
   .top-press_swiper {
     width: 100%;
+    @include c.mq() {
+      margin-bottom: 6rem;
+    }
     .swiper-slide {
       width: v.pxtovw(400);
       &.swiper-slide-active {
         width: v.pxtovw(600);
         .contents {
           padding: 2.5rem 4rem 2rem;
+          @include c.mq() {
+            padding: 1rem v.pxtovw_sp(15);
+          }
           .cate {
             font-size: 1.5rem;
             margin-bottom: 1rem;
+            @include c.mq() {
+              font-size: 1.2rem;
+              margin-bottom: 5px;
+            }
           }
           p {
             font-size: 1.6rem;
             margin-bottom: 3rem;
+            @include c.mq() {
+              font-size: 1.5rem;
+              line-height: 1.5;
+              margin-bottom: 1rem;
+              display: -webkit-box;
+              -webkit-line-clamp: 2; /* 2行に制限 */
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
           }
           .time {
             font-size: 1.4rem;
             text-align: end;
+            @include c.mq() {
+              font-size: 1rem;
+            }
           }
         }
       }
@@ -542,11 +860,20 @@ top
   }
   .ttl-wrap {
     margin-bottom: 5.2rem;
+    @include c.mq() {
+      padding-left: v.pxtovw_sp(15);
+    }
     &::before {
       width: v.pxtovw(183);
       background-color: #fff;
       left: -22rem;
       bottom: 4rem;
+      @include c.mq() {
+        width: 13rem;
+        left: auto;
+        right: -15rem;
+        bottom: 0.8rem;
+      }
     }
     .num {
       margin-right: 0.7rem;
@@ -560,6 +887,11 @@ top
     width: 31.3rem;
     aspect-ratio: 1/0.17;
     margin: 0 auto;
+    @include c.mq() {
+      width: 24.5rem;
+      aspect-ratio: 1/0.2;
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -568,12 +900,18 @@ top
   padding: 11.5rem 0 15rem;
   background-color: v.$bg-color01;
   z-index: 20;
+  @include c.mq() {
+    padding: 9rem 0 10rem;
+  }
   .ttl-posi {
     text-align: center;
   }
   .ttl-wrap {
     margin-bottom: 11.8rem;
     text-align: start;
+    @include c.mq() {
+      margin-bottom: 5rem;
+    }
     .num {
       margin-left: 0.7rem;
       .line {
@@ -585,16 +923,28 @@ top
     table-layout: fixed;
     width: 65rem;
     margin: 0 auto 4.5rem;
+    @include c.mq() {
+      width: 100%;
+    }
     th,
     td {
       font-size: 1.6rem;
       padding: 1rem;
+      @include c.mq() {
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
     }
     th {
       position: relative;
       width: 38%;
       padding-right: 3rem;
       text-align: end;
+      @include c.mq() {
+        width: 30%;
+        padding-right: 1rem;
+        text-align: left;
+      }
       &::before {
         content: "";
         width: 0.5px;
@@ -604,6 +954,9 @@ top
         top: 1.8rem;
         right: 1rem;
         rotate: 25deg;
+        @include c.mq() {
+          display: none;
+        }
       }
     }
   }
@@ -613,5 +966,9 @@ top
     padding-bottom: 1rem;
     border-bottom: 0.5px solid #fff;
     margin: 0 auto 7rem;
+    @include c.mq() {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
   }
 }
