@@ -2192,7 +2192,7 @@ under
 }
 .p-projects .p-projects_contents .project_mv {
   width: 71.3194444444vw;
-  aspect-ratio: 1/0.2;
+  aspect-ratio: 1/0.25;
   position: absolute;
   top: -12.0833333333vw;
   right: -2.7777777778vw;
@@ -2206,15 +2206,10 @@ under
   }
 }
 .p-projects .p-projects_contents .project_mv img {
-  filter: brightness(0.7);
-}
-@media screen and (max-width: 768px) {
-  .p-projects .p-projects_contents .project_mv img {
-    filter: brightness(0.6);
-  }
+  filter: brightness(0.6);
 }
 .p-projects .p-projects_contents .inner {
-  padding: 6.25vw 0 10rem;
+  padding: 9.7222222222vw 0 10rem;
   position: relative;
   z-index: 20;
 }
@@ -2257,7 +2252,7 @@ under
 }
 @media screen and (max-width: 768px) {
   .p-projects .p-projects_contents .ttl h2 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     line-height: 1.5;
   }
 }
@@ -2344,12 +2339,52 @@ under
 .p-projects .p-projects_contents .postcont .box:last-of-type {
   margin-bottom: 0;
 }
-.p-projects .p-projects_contents .postcont .flex {
+.p-projects .p-projects_contents .postcont .img-wrap:has(> .img-box + .img-box) {
+  max-width: 100rem;
+  display: flex;
   gap: 4rem;
 }
 @media screen and (max-width: 768px) {
-  .p-projects .p-projects_contents .postcont .flex {
+  .p-projects .p-projects_contents .postcont .img-wrap:has(> .img-box + .img-box) {
+    flex-direction: column;
     gap: 2rem;
+  }
+}
+.p-projects .p-projects_contents .postcont .img-wrap:has(> .img-box + .img-box) .img-box {
+  width: 100%;
+}
+.p-projects .p-projects_contents .postcont .img-wrap .img-box:only-child {
+  max-width: 100rem;
+}
+.p-projects .p-projects_contents .postcont .img-text {
+  display: flex;
+  gap: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .p-projects .p-projects_contents .postcont .img-text {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.p-projects .p-projects_contents .postcont .img-text .left {
+  width: 40rem;
+}
+@media screen and (max-width: 768px) {
+  .p-projects .p-projects_contents .postcont .img-text .left {
+    width: 100%;
+  }
+}
+.p-projects .p-projects_contents .postcont .img-text .left .img-box {
+  width: 100%;
+  height: 100%;
+  max-height: 50rem;
+}
+.p-projects .p-projects_contents .postcont .img-text .right {
+  width: calc(100% - 44rem);
+}
+@media screen and (max-width: 768px) {
+  .p-projects .p-projects_contents .postcont .img-text .right {
+    width: 100%;
   }
 }
 .p-projects .p-projects_contents .postcont ul li {
@@ -2517,93 +2552,6 @@ under
     bottom: -2rem;
     left: -32vw;
     width: 66.6666666667vw;
-  }
-}
-
-.produce-animation .p-projects_contents .inner {
-  padding: 12.1527777778vw 0 10rem;
-}
-@media screen and (max-width: 768px) {
-  .produce-animation .p-projects_contents .postcont .box {
-    flex-direction: column;
-  }
-}
-.produce-animation .p-projects_contents .postcont .box .left {
-  width: 29.8rem;
-}
-@media screen and (max-width: 768px) {
-  .produce-animation .p-projects_contents .postcont .box .left {
-    width: 100%;
-  }
-}
-.produce-animation .p-projects_contents .postcont .box .right {
-  width: calc(100% - 33.8rem);
-}
-@media screen and (max-width: 768px) {
-  .produce-animation .p-projects_contents .postcont .box .right {
-    width: 100%;
-  }
-}
-.produce-animation .p-projects_contents .postcont .box:first-of-type .left .img-box {
-  aspect-ratio: 1/1.27;
-}
-.produce-animation .p-projects_contents .postcont .box:first-of-type .left .img-box img {
-  -o-object-position: top;
-     object-position: top;
-}
-.produce-animation .p-projects_contents .postcont .box:last-of-type .left .img-box {
-  aspect-ratio: 1/1;
-}
-
-.new-ip_activity .p-projects_contents .inner {
-  padding: 12.1527777778vw 0 10rem;
-}
-@media screen and (max-width: 768px) {
-  .new-ip_activity .p-projects_contents .postcont .box {
-    flex-direction: column;
-  }
-}
-.new-ip_activity .p-projects_contents .postcont .box .left .img-box,
-.new-ip_activity .p-projects_contents .postcont .box .right .img-box {
-  width: 42.4rem;
-  aspect-ratio: 1/0.65;
-}
-@media screen and (max-width: 768px) {
-  .new-ip_activity .p-projects_contents .postcont .box .left .img-box,
-  .new-ip_activity .p-projects_contents .postcont .box .right .img-box {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .exosuit-dev .p-projects_contents .postcont .box {
-    flex-direction: column;
-  }
-}
-.exosuit-dev .p-projects_contents .postcont .box .left .img-box {
-  width: 30rem;
-  aspect-ratio: 1/0.8;
-}
-@media screen and (max-width: 768px) {
-  .exosuit-dev .p-projects_contents .postcont .box .left .img-box {
-    width: 100%;
-  }
-}
-.exosuit-dev .p-projects_contents .postcont .box .right {
-  width: calc(100% - 34rem);
-}
-@media screen and (max-width: 768px) {
-  .exosuit-dev .p-projects_contents .postcont .box .right {
-    width: 100%;
-  }
-}
-
-.fund .p-projects_contents .postcont .img-box {
-  width: 100rem;
-}
-@media screen and (max-width: 768px) {
-  .fund .p-projects_contents .postcont .img-box {
-    width: 100%;
   }
 }
 

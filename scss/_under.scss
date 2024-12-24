@@ -96,7 +96,8 @@ under
     }
     .project_mv {
       width: v.pxtovw(1027);
-      aspect-ratio: 1/0.2;
+      // aspect-ratio: 1/0.2;
+      aspect-ratio: 1/0.25;
       position: absolute;
       top: v.pxtovw(-174);
       right: v.pxtovw(-40);
@@ -107,14 +108,12 @@ under
         aspect-ratio: 1/0.4;
       }
       img {
-        filter: brightness(0.7);
-        @include c.mq() {
-          filter: brightness(0.6);
-        }
+        filter: brightness(0.6);
       }
     }
     .inner {
-      padding: v.pxtovw(90) 0 10rem;
+      // padding: v.pxtovw(90) 0 10rem;
+      padding: v.pxtovw(140) 0 10rem;
       position: relative;
       z-index: 20;
       @include c.mq() {
@@ -148,7 +147,7 @@ under
         line-height: 1.2;
         font-weight: 400;
         @include c.mq() {
-          font-size: 3.2rem;
+          font-size: 2.8rem;
           line-height: 1.5;
         }
       }
@@ -223,10 +222,48 @@ under
           margin-bottom: 0;
         }
       }
-      .flex {
+      .img-wrap {
+        &:has(> .img-box + .img-box) {
+          max-width: 100rem;
+          display: flex;
+          gap: 4rem;
+          @include c.mq() {
+            flex-direction: column;
+            gap: 2rem;
+          }
+          .img-box {
+            width: 100%;
+          }
+        }
+        .img-box {
+          &:only-child {
+            max-width: 100rem;
+          }
+        }
+      }
+      .img-text {
+        display: flex;
         gap: 4rem;
         @include c.mq() {
+          flex-direction: column;
           gap: 2rem;
+        }
+        .left {
+          width: 40rem;
+          @include c.mq() {
+            width: 100%;
+          }
+          .img-box {
+            width: 100%;
+            height: 100%;
+            max-height: 50rem;
+          }
+        }
+        .right {
+          width: calc(100% - 44rem);
+          @include c.mq() {
+            width: 100%;
+          }
         }
       }
       ul {
@@ -378,114 +415,6 @@ under
           bottom: -2rem;
           left: v.pxtovw_sp(-120);
           width: v.pxtovw_sp(250);
-        }
-      }
-    }
-  }
-}
-
-.produce-animation {
-  .p-projects_contents {
-    .inner {
-      padding: v.pxtovw(175) 0 10rem;
-    }
-    .postcont {
-      .box {
-        @include c.mq() {
-          flex-direction: column;
-        }
-        .left {
-          width: 29.8rem;
-          @include c.mq() {
-            width: 100%;
-          }
-        }
-        .right {
-          width: calc(100% - 33.8rem);
-          @include c.mq() {
-            width: 100%;
-          }
-        }
-        &:first-of-type {
-          .left {
-            .img-box {
-              aspect-ratio: 1/1.27;
-              img {
-                object-position: top;
-              }
-            }
-          }
-        }
-        &:last-of-type {
-          .left {
-            .img-box {
-              aspect-ratio: 1/1;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-.new-ip_activity {
-  .p-projects_contents {
-    .inner {
-      padding: v.pxtovw(175) 0 10rem;
-    }
-    .postcont {
-      .box {
-        @include c.mq() {
-          flex-direction: column;
-        }
-        .left,
-        .right {
-          .img-box {
-            width: 42.4rem;
-            aspect-ratio: 1/0.65;
-            @include c.mq() {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.exosuit-dev {
-  .p-projects_contents {
-    .postcont {
-      .box {
-        @include c.mq() {
-          flex-direction: column;
-        }
-        .left {
-          .img-box {
-            width: 30rem;
-            aspect-ratio: 1/0.8;
-            @include c.mq() {
-              width: 100%;
-            }
-          }
-        }
-        .right {
-          width: calc(100% - 34rem);
-          @include c.mq() {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
-.fund {
-  .p-projects_contents {
-    .postcont {
-      .img-box {
-        width: 100rem;
-        @include c.mq() {
-          width: 100%;
         }
       }
     }
