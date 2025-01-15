@@ -1,27 +1,12 @@
 // 変数の設定
-$main-txt: #fff !default;
-$sub-color01: #202020;
-$sub-color02: #999;
+$main-txt: #333 !default;
+$sub-color01: #063458;
+$sub-color02: #0181cc;
+$sub-color03: #e60012;
+$sub-color04: #ffdc00;
 $bg-color01: #0a0a0a;
 
-$grade01: linear-gradient(
-  135deg,
-  rgba(255, 255, 255, 1),
-  rgba(238, 238, 238, 1) 8%,
-  rgba(136, 136, 136, 1) 10%,
-  rgba(238, 238, 238, 1) 13%,
-  rgba(243, 243, 243, 1) 29%,
-  rgba(136, 136, 136, 1) 30%,
-  rgba(238, 238, 238, 1) 32%,
-  rgba(243, 243, 243, 1) 55%,
-  rgba(121, 121, 121, 1) 57%,
-  rgba(238, 238, 238, 1) 59%,
-  rgba(255, 255, 255, 1)
-);
-
-$font-noto: "Noto Sans JP", sans-serif;
-$font-anona: "anona", sans-serif;
-$font-config: "config-variable", sans-serif;
+$font-cjk: "noto-sans-cjk-jp", sans-serif;
 
 // $shadow01: 0px 4px 4px rgba(#000, 0.25);
 
