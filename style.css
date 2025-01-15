@@ -13,7 +13,6 @@ html {
 
 body {
   font-family: "noto-sans-cjk-jp", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  background-color: #0a0a0a;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -80,6 +79,7 @@ td,
 a {
   font-size: 1.6rem;
   font-weight: 400;
+  line-height: 1.4;
 }
 
 .h-scale .img-box {
@@ -122,6 +122,122 @@ input[type=button]::-webkit-search-decoration {
 input[type=submit]:focus,
 input[type=button]:focus {
   outline-offset: -2px;
+}
+
+.wrap_cta {
+  background: url(../images/cta_bg.png) no-repeat center/cover;
+  padding: 7.5rem 0;
+}
+.wrap_cta .box {
+  position: relative;
+  width: 118rem;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-bottom: 4rem;
+  border: 3px solid;
+  -o-border-image: linear-gradient(to right, #f1cf70 50%, #0181cc 50%) 1;
+     border-image: linear-gradient(to right, #f1cf70 50%, #0181cc 50%) 1;
+  border-top: none;
+}
+.wrap_cta .box .head-wrap {
+  padding: 5px 2.7rem;
+  box-shadow: 0px 4.72px 4.72px rgba(0, 0, 0, 0.25);
+  margin-bottom: 3rem;
+  background: url(../images/cta_head-ttl_bg.svg) no-repeat center/cover;
+}
+.wrap_cta .box .head-wrap .logo {
+  width: 60.8rem;
+}
+.wrap_cta .box .form {
+  width: 51.6rem;
+  margin-left: 9rem;
+  margin-bottom: 2rem;
+}
+.wrap_cta .box .form p {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #b1010e;
+  margin-bottom: 1rem;
+}
+.wrap_cta .box .form a {
+  position: relative;
+  width: 51.6rem;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/0.14;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgb(230, 0, 18);
+  background: radial-gradient(circle, rgb(230, 0, 18) 50%, rgb(160, 0, 12) 100%);
+  box-shadow: 2.36px 4.72px 9.43px rgba(95, 16, 16, 0.44);
+}
+.wrap_cta .box .form a svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12rem;
+}
+.wrap_cta .box .tel {
+  position: relative;
+  padding-left: 22rem;
+  gap: 4rem;
+  align-items: center;
+}
+.wrap_cta .box .tel::before {
+  content: "";
+  position: absolute;
+  left: 43rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 14px solid #7fc0e5;
+  border-right: 0;
+}
+.wrap_cta .box .tel p {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.wrap_cta .box .tel .txt {
+  color: #063458;
+  margin-bottom: 5px;
+}
+.wrap_cta .box .tel .time {
+  color: #0181cc;
+}
+.wrap_cta .box .tel .time span {
+  font-size: 1.4rem;
+  border: 1px solid #0181cc;
+  padding: 0 5px;
+  margin-right: 1rem;
+}
+.wrap_cta .box .tel a {
+  font-size: 4.7rem;
+  font-weight: 600;
+}
+.wrap_cta .box .tel a svg path {
+  fill: #333;
+}
+.wrap_cta .box .message .hukidashi {
+  width: 33.6rem;
+  position: absolute;
+  top: 12rem;
+  right: 20rem;
+  z-index: 1;
+}
+.wrap_cta .box .message .people {
+  width: 35.8rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /*************************************************
@@ -208,12 +324,295 @@ input[type=button]:focus {
 /*************************************************
 header
 *************************************************/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 6px solid #0181cc;
+  z-index: 999;
+}
+header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1.5rem 1.4583333333vw 1rem 3.8888888889vw;
+}
+header .logo {
+  width: 16rem;
+}
+header .tel {
+  gap: 8px;
+}
+header .tel div .ttl {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 1px solid #0181cc;
+}
+header .tel div:first-of-type .ttl {
+  color: #0181cc;
+  padding-left: 7px;
+  margin-bottom: 0.9rem;
+}
+header .tel div:first-of-type .time {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0181cc;
+}
+header .tel div:last-of-type .ttl {
+  color: #fff;
+  background-color: #0181cc;
+  padding-left: 7px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+header .tel div:last-of-type a {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
 /*************************************************
 footer
 *************************************************/
 /*************************************************
 top
 *************************************************/
+.wrap_kv {
+  position: relative;
+  width: 100vw;
+  aspect-ratio: 1/0.45;
+  height: auto;
+  margin-top: 8.8rem;
+  background: url(../images/kv_pc.jpg) no-repeat top/contain;
+}
+.wrap_kv .sub-text {
+  width: 44.8rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 9.375vw;
+}
+.wrap_kv .main-text {
+  width: 110rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
+}
+.wrap_kv .gekkeizyu {
+  width: 56rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4.8611111111vw;
+}
+.wrap_kv .people {
+  width: 19.2rem;
+  position: absolute;
+}
+.wrap_kv .people.hot {
+  top: 3.2638888889vw;
+  left: 5vw;
+}
+.wrap_kv .people.cold {
+  bottom: 5.1388888889vw;
+  right: 5vw;
+}
+
+.wrap01_negative {
+  position: relative;
+  padding: 6rem 0 34.5rem;
+  background: url(../images/wrap01_bg01.png) no-repeat top/contain, url(../images/wrap01_bg02.png) no-repeat bottom/contain;
+  z-index: 0;
+}
+.wrap01_negative h2 {
+  text-align: center;
+  width: 71.7rem;
+  margin: 0 auto 5.5rem;
+}
+.wrap01_negative .block {
+  position: relative;
+  padding: 6rem 5rem 4rem;
+  background-color: #fff;
+  margin-bottom: 2.2rem;
+}
+.wrap01_negative .block h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #063458;
+  margin-bottom: 3rem;
+}
+.wrap01_negative .block .flex {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.wrap01_negative .block .flex .box {
+  width: calc(33.3333333333% - 0.6666666667rem);
+}
+.wrap01_negative .block .flex .box .txt {
+  position: relative;
+}
+.wrap01_negative .block .flex .box .txt img {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 2.4rem;
+}
+.wrap01_negative .block .flex .box .txt img.reverse {
+  left: auto;
+  right: 2.4rem;
+  transform: scale(-1, 1);
+}
+.wrap01_negative .block .flex .box .txt p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  background-color: #063458;
+  padding: 7px 0;
+}
+.wrap01_negative .block .arrow01 {
+  position: absolute;
+  width: 28.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wrap01_negative .block .arrow01.c-blu {
+  top: -1px;
+}
+.wrap01_negative .block .arrow01.c-blu svg path {
+  fill: #0181cc;
+}
+.wrap01_negative .block .arrow01.c-whi {
+  bottom: -3.5rem;
+}
+.wrap01_negative .arrow02 {
+  width: 28.5rem;
+  margin: 0 auto;
+}
+
+.wrap01_positive {
+  position: relative;
+  background: url(../images/wrap01_bg03.png) no-repeat center/cover;
+  background-color: rgba(6, 52, 88, 0.1);
+  padding-bottom: 10rem;
+}
+.wrap01_positive .omakase {
+  position: absolute;
+  top: -33rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100rem;
+  margin: 0 auto;
+}
+.wrap01_positive .omakase .omakase_inner {
+  position: relative;
+}
+.wrap01_positive .omakase .omakase_inner::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -7rem;
+  width: 28.8rem;
+  aspect-ratio: 1/0.13;
+  background: url(../images/section-arrow03.svg) no-repeat top/contain;
+}
+.wrap01_positive .omakase .omakase_inner h2 {
+  position: relative;
+  width: 80.8rem;
+  margin: 0 0 0 auto;
+  margin-bottom: 2.8rem;
+  z-index: 1;
+}
+.wrap01_positive .omakase .omakase_inner .people {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  width: 21.5rem;
+}
+.wrap01_positive .omakase .omakase_inner .flex {
+  position: relative;
+  gap: 1rem;
+  z-index: 1;
+}
+.wrap01_positive .omakase .omakase_inner .flex .img-box {
+  border: 6px solid #fff;
+  box-shadow: 0px 0px 10px rgba(6, 52, 88, 0.5);
+}
+.wrap01_positive .block {
+  background-color: #fff;
+  padding-top: 19.7rem;
+  padding: 18rem 5rem 8rem;
+  box-shadow: 0px 0px 31px rgba(6, 52, 88, 0.16);
+}
+.wrap01_positive .block .box {
+  gap: 4rem;
+  margin-bottom: 7rem;
+}
+.wrap01_positive .block .box:last-of-type {
+  margin-bottom: 0;
+}
+.wrap01_positive .block .box .left .num {
+  position: relative;
+  display: inline-block;
+  padding-left: 5.7rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #e60012;
+  font-size: 3.1rem;
+  font-weight: 600;
+  color: #e60012;
+  margin-bottom: 1rem;
+}
+.wrap01_positive .block .box .left .num::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 36px solid #e60012;
+  border-right: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.wrap01_positive .block .box .left h3 {
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #063458;
+  margin-bottom: 2.5rem;
+}
+.wrap01_positive .block .box .left h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #0181cc;
+  margin-bottom: 2rem;
+}
+.wrap01_positive .block .box .left p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.wrap01_positive .block .box .left p span {
+  font-weight: 600;
+  text-decoration: underline;
+}
+.wrap01_positive .block .box .left p strong {
+  color: #e60012;
+}
+.wrap01_positive .block .box .right .img-box {
+  width: 47.7rem;
+}
+.wrap01_positive .block .box.reverse {
+  flex-direction: row-reverse;
+}
+
 /**
  * Swiper 8.1.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions

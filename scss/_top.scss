@@ -3,3 +3,234 @@
 /*************************************************
 top
 *************************************************/
+.wrap_kv {
+  position: relative;
+  width: 100vw;
+  aspect-ratio: 1/0.45;
+  height: auto;
+  margin-top: 8.8rem;
+  background: url(../images/kv_pc.jpg) no-repeat top/contain;
+  .sub-text {
+    width: 44.8rem;
+    position: absolute;
+    @include c.center(true, false);
+    top: v.pxtovw(135);
+  }
+  .main-text {
+    width: 110rem;
+    position: absolute;
+    @include c.center(true, true);
+  }
+  .gekkeizyu {
+    width: 56rem;
+    position: absolute;
+    @include c.center(true, false);
+    bottom: v.pxtovw(70);
+  }
+  .people {
+    width: 19.2rem;
+    position: absolute;
+    &.hot {
+      top: v.pxtovw(47);
+      left: v.pxtovw(72);
+    }
+    &.cold {
+      bottom: v.pxtovw(74);
+      right: v.pxtovw(72);
+    }
+  }
+}
+
+.wrap01_negative {
+  position: relative;
+  padding: 6rem 0 34.5rem;
+  background: url(../images/wrap01_bg01.png) no-repeat top/contain,
+    url(../images/wrap01_bg02.png) no-repeat bottom/contain;
+  z-index: 0;
+  h2 {
+    text-align: center;
+    width: 71.7rem;
+    margin: 0 auto 5.5rem;
+  }
+  .block {
+    position: relative;
+    padding: 6rem 5rem 4rem;
+    background-color: #fff;
+    margin-bottom: 2.2rem;
+    h3 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      text-align: center;
+      color: v.$sub-color01;
+      margin-bottom: 3rem;
+    }
+    .flex {
+      flex-wrap: wrap;
+      gap: 1rem;
+      .box {
+        width: calc((100% / 3) - (2rem / 3));
+        .txt {
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            width: 2.4rem;
+            &.reverse {
+              left: auto;
+              right: 2.4rem;
+              transform: scale(-1, 1);
+            }
+          }
+          p {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+            background-color: v.$sub-color01;
+            padding: 7px 0;
+          }
+        }
+      }
+    }
+    .arrow01 {
+      position: absolute;
+      width: 28.5rem;
+      @include c.center(true, false);
+      &.c-blu {
+        top: -1px;
+        svg {
+          path {
+            fill: v.$sub-color02;
+          }
+        }
+      }
+      &.c-whi {
+        bottom: -3.5rem;
+      }
+    }
+  }
+  .arrow02 {
+    width: 28.5rem;
+    margin: 0 auto;
+  }
+}
+.wrap01_positive {
+  position: relative;
+  background: url(../images/wrap01_bg03.png) no-repeat center/cover;
+  background-color: rgba($color: v.$sub-color01, $alpha: 0.1);
+  padding-bottom: 10rem;
+  .omakase {
+    position: absolute;
+    top: -33rem;
+    @include c.center(true, false);
+    width: 100rem;
+    margin: 0 auto;
+    .omakase_inner {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        @include c.center(true, false);
+        bottom: -7rem;
+        width: 28.8rem;
+        aspect-ratio: 1/0.13;
+        background: url(../images/section-arrow03.svg) no-repeat top/contain;
+      }
+      h2 {
+        position: relative;
+        width: 80.8rem;
+        margin: 0 0 0 auto;
+        margin-bottom: 2.8rem;
+        z-index: 1;
+      }
+      .people {
+        position: absolute;
+        top: -5rem;
+        left: 0;
+        width: 21.5rem;
+      }
+      .flex {
+        position: relative;
+        gap: 1rem;
+        z-index: 1;
+        .img-box {
+          border: 6px solid #fff;
+          box-shadow: v.$shadow01;
+        }
+      }
+    }
+  }
+  .block {
+    background-color: #fff;
+    padding-top: 19.7rem;
+    padding: 18rem 5rem 8rem;
+    box-shadow: v.$shadow02;
+    .box {
+      gap: 4rem;
+      margin-bottom: 7rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      .left {
+        // width: 49.5rem;
+        .num {
+          position: relative;
+          display: inline-block;
+          padding-left: 5.7rem;
+          padding-bottom: 0.6rem;
+          border-bottom: 1px solid v.$sub-color03;
+          font-size: 3.1rem;
+          font-weight: 600;
+          color: v.$sub-color03;
+          margin-bottom: 1rem;
+          &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 36px solid v.$sub-color03;
+            border-right: 0;
+            position: absolute;
+            @include c.center(false, true);
+            left: 0;
+          }
+        }
+        h3 {
+          font-size: 3.4rem;
+          font-weight: 600;
+          color: v.$sub-color01;
+          margin-bottom: 2.5rem;
+        }
+        h4 {
+          font-size: 2.2rem;
+          font-weight: 600;
+          color: v.$sub-color02;
+          margin-bottom: 2rem;
+        }
+        p {
+          font-size: 1.8rem;
+          font-weight: 500;
+          line-height: 1.7;
+          span {
+            font-weight: 600;
+            text-decoration: underline;
+          }
+          strong {
+            color: v.$sub-color03;
+          }
+        }
+      }
+      .right {
+        .img-box {
+          width: 47.7rem;
+        }
+      }
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

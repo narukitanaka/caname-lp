@@ -4,11 +4,15 @@ $sub-color01: #063458;
 $sub-color02: #0181cc;
 $sub-color03: #e60012;
 $sub-color04: #ffdc00;
+$sub-color05: #b1010e;
 $bg-color01: #0a0a0a;
 
 $font-cjk: "noto-sans-cjk-jp", sans-serif;
 
-// $shadow01: 0px 4px 4px rgba(#000, 0.25);
+$shadow01: 0px 0px 10px rgba(#063458, 0.5);
+$shadow02: 0px 0px 31px rgba(#063458, 0.16);
+$shadow03: 0px 4.72px 4.72px rgba(#000000, 0.25);
+$shadow04: 2.36px 4.72px 9.43px rgba(#5f1010, 0.44);
 
 //vwを自動計算
 $base-viewport: 1440;
