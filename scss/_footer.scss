@@ -4,4 +4,28 @@
 footer
 *************************************************/
 footer {
+  padding: 2.5rem 0 2rem;
+  background-color: v.$sub-color01;
+  .inner {
+    justify-content: space-between;
+    p,
+    dt,
+    dd,
+    a {
+      font-size: 1.4rem;
+      color: #fff;
+    }
+    dl {
+      display: flex;
+      gap: 3rem;
+      dt {
+        font-weight: 600;
+      }
+      dd {
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

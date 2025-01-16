@@ -375,6 +375,31 @@ header .tel div:last-of-type a {
 /*************************************************
 footer
 *************************************************/
+footer {
+  padding: 2.5rem 0 2rem;
+  background-color: #063458;
+}
+footer .inner {
+  justify-content: space-between;
+}
+footer .inner p,
+footer .inner dt,
+footer .inner dd,
+footer .inner a {
+  font-size: 1.4rem;
+  color: #fff;
+}
+footer .inner dl {
+  display: flex;
+  gap: 3rem;
+}
+footer .inner dl dt {
+  font-weight: 600;
+}
+footer .inner dl dd a {
+  text-decoration: underline;
+}
+
 /*************************************************
 top
 *************************************************/
@@ -843,6 +868,391 @@ top
   position: absolute;
   bottom: 3px;
   z-index: -1;
+}
+
+.wrap03 h2,
+.wrap04 h2,
+.wrap05 h2,
+.wrap06 h2,
+.wrap_form h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #063458;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.wrap03 .swiper-button-prev,
+.wrap03 .swiper-button-next,
+.wrap04 .swiper-button-prev,
+.wrap04 .swiper-button-next {
+  width: 9.4rem;
+  aspect-ratio: 1/1;
+  height: auto;
+  background: rgb(13, 112, 190);
+  background: linear-gradient(180deg, rgb(13, 112, 190) 0%, rgb(6, 52, 88) 100%);
+}
+.wrap03 .swiper-button-prev::after,
+.wrap03 .swiper-button-next::after,
+.wrap04 .swiper-button-prev::after,
+.wrap04 .swiper-button-next::after {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+.wrap03 .swiper-pagination,
+.wrap04 .swiper-pagination {
+  bottom: -60px !important;
+}
+.wrap03 .swiper-pagination .swiper-pagination-bullet,
+.wrap04 .swiper-pagination .swiper-pagination-bullet {
+  width: 1.4rem !important;
+  height: 1.4rem !important;
+  background-color: #d9d9d9;
+  border: 1px solid #a6a6a6;
+}
+.wrap03 .swiper-pagination .swiper-pagination-bullet-active,
+.wrap04 .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #063458;
+}
+
+.wrap03 {
+  padding: 10rem 0 15rem;
+  background: url(../images/wrap03_bg.png) no-repeat top/cover;
+}
+.wrap03 .swiper-works {
+  position: relative;
+}
+.wrap03 .swiper-slide {
+  background-color: #fff;
+  box-shadow: 0px 0px 6px rgba(6, 52, 88, 0.2);
+  padding: 2.4rem 2.2rem 3.2rem;
+}
+.wrap03 .swiper-slide .ttl {
+  margin-bottom: 1rem;
+}
+.wrap03 .swiper-slide .ttl p {
+  font-weight: 600;
+}
+.wrap03 .swiper-slide .ttl .area {
+  display: inline-block;
+  padding: 4px 10px;
+  color: #fff;
+  background-color: #0181cc;
+  margin-bottom: 5px;
+}
+.wrap03 .swiper-slide .ttl .name {
+  font-size: 2rem;
+  color: #063458;
+}
+.wrap03 .swiper-slide dl {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 6px;
+}
+.wrap03 .swiper-slide dl:last-of-type {
+  margin-bottom: 0;
+}
+.wrap03 .swiper-slide dl dt,
+.wrap03 .swiper-slide dl dd {
+  font-weight: 600;
+  color: #063458;
+}
+.wrap03 .swiper-slide dl dt {
+  border: 1px solid #063458;
+  padding: 0 5px;
+}
+.wrap03 .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #063458;
+}
+.wrap03 .swiper-button-prev {
+  left: 30px !important;
+}
+.wrap03 .swiper-button-next {
+  right: 30px !important;
+}
+
+.wrap04 {
+  padding: 10rem 0 15rem;
+  background-color: #faf5e6;
+}
+.wrap04 .swiper-voice {
+  position: relative;
+}
+.wrap04 .swiper-slide {
+  background-color: #fff;
+  box-shadow: 0px 0px 24px rgba(6, 52, 88, 0.1);
+  padding: 5.8rem 4.4rem 6rem;
+}
+.wrap04 .swiper-slide .flex {
+  justify-content: space-between;
+}
+.wrap04 .swiper-slide .left {
+  flex-basis: 37%;
+}
+.wrap04 .swiper-slide .right {
+  flex-basis: 60%;
+}
+.wrap04 .swiper-slide .right div {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #063458;
+  margin-bottom: 2.5rem;
+}
+.wrap04 .swiper-slide .right h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #0181cc;
+  margin-bottom: 2rem;
+}
+.wrap04 .swiper-slide .right h3 span {
+  color: #fff;
+  background-color: #0181cc;
+  padding: 1px 1rem 2px;
+  margin-right: 1rem;
+}
+.wrap04 .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #0181cc;
+}
+.wrap04 .swiper-button-prev {
+  left: 100px !important;
+}
+.wrap04 .swiper-button-next {
+  right: 100px !important;
+}
+
+.wrap05 {
+  padding: 10rem 0;
+  background: url(../images/wrap05_bg.png) no-repeat top/cover;
+}
+.wrap05 .box {
+  gap: 4.8rem;
+  position: relative;
+  max-width: 92rem;
+  margin: 0 auto 5.7rem;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(6, 52, 88, 0.24);
+}
+.wrap05 .box::before {
+  position: absolute;
+  bottom: -4.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 17.8rem;
+  aspect-ratio: 1/0.18;
+  background: url(../images/section-arrow03.svg) no-repeat center/contain;
+}
+.wrap05 .box:last-of-type::before {
+  display: none;
+}
+.wrap05 .box .left {
+  width: 34.4rem;
+}
+.wrap05 .box .right {
+  width: 48rem;
+  padding-top: 5rem;
+}
+.wrap05 .box .right h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #063458;
+  margin-bottom: 1.5rem;
+}
+.wrap05 .box .right p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.wrap05 .box .flow-num {
+  width: 9.6rem;
+  position: absolute;
+  top: -3.6rem;
+  left: -2rem;
+}
+.wrap05 .box:last-of-type {
+  margin-bottom: 0;
+}
+
+.wrap06 {
+  padding: 10rem 0;
+  background: url(../images/wrap06_bg.png) no-repeat top/cover;
+}
+.wrap06 .qa-list {
+  max-width: 73.2rem;
+  margin: 0 auto;
+}
+.wrap06 .qa-list dl {
+  margin-bottom: 2rem;
+  box-shadow: 0px 4px 36px rgba(6, 52, 88, 0.15);
+}
+.wrap06 .qa-list dl:last-of-type {
+  margin-bottom: 0;
+}
+.wrap06 .qa-list dl.open dt::before {
+  transform: translateY(-50%) rotate(0deg);
+}
+.wrap06 .qa-list dl dt {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 2rem 3rem;
+  background-color: #fff;
+}
+.wrap06 .qa-list dl dt::before {
+  content: "";
+  width: 1.4rem;
+  aspect-ratio: 1/1;
+  background: url(../images/faq-arrow.png) no-repeat center/contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  right: 4rem;
+  transition: all 0.3s;
+}
+.wrap06 .qa-list dl dt span {
+  font-size: 3rem;
+  color: #bdddf0;
+  line-height: 1;
+  margin-top: -0.5rem;
+}
+.wrap06 .qa-list dl dd {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  background-color: #e8f6ff;
+  padding: 3rem;
+}
+.wrap06 .qa-list dl dd span {
+  font-size: 3rem;
+  color: #0081cc;
+  margin-top: -1rem;
+}
+.wrap06 .qa-list dl dd p {
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.wrap06 .qa-list dl dd p:last-of-type {
+  margin-bottom: 0;
+}
+.wrap06 .qa-list dl dd p strong {
+  color: #063458;
+}
+
+.wrap_form {
+  padding: 10rem 0;
+  background-color: #e7f4fc;
+}
+.wrap_form form {
+  max-width: 65rem;
+  margin: 0 auto;
+}
+.wrap_form form table {
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+.wrap_form form table th {
+  width: 30%;
+  font-weight: 500;
+  text-align: end;
+  padding: 1.5rem 0;
+  padding-right: 3.7rem;
+}
+.wrap_form form table th span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e60012;
+}
+.wrap_form form table td {
+  padding-bottom: 1.6rem;
+}
+.wrap_form form table td div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.wrap_form form table td p {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.wrap_form form table td p a {
+  text-decoration: underline;
+}
+.wrap_form form table td p svg path {
+  fill: #000;
+}
+.wrap_form form table td input,
+.wrap_form form table td select,
+.wrap_form form table td textarea {
+  background-color: #fff;
+  border: 1px solid #c8e2f0;
+  border-radius: 6px;
+}
+.wrap_form form table td input[type=text],
+.wrap_form form table td input[type=email],
+.wrap_form form table td input[type=tel],
+.wrap_form form table td select,
+.wrap_form form table td textarea {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  box-shadow: -2px -2px 6px rgba(0, 0, 0, 0.06);
+}
+.wrap_form form table td textarea {
+  margin-bottom: 3rem;
+}
+.wrap_form form table .select-wrap {
+  position: relative;
+  width: 25.5rem;
+  margin-bottom: 1.6rem;
+}
+.wrap_form form table .select-wrap::before {
+  content: "";
+  width: 1.4rem;
+  aspect-ratio: 1/1;
+  background: url(../images/faq-arrow.png) no-repeat center/contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  right: 2rem;
+}
+.wrap_form form .btn-submit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.wrap_form form .btn-submit:hover svg path {
+  fill: #e60012;
+}
+.wrap_form form .btn-submit:hover input[type=submit] {
+  background-color: #fff;
+  color: #e60012;
+}
+.wrap_form form .btn-submit svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 18rem;
+}
+.wrap_form form .btn-submit svg path {
+  transition: all 0.3s;
+}
+.wrap_form form .btn-submit input[type=submit] {
+  width: 38.2rem;
+  aspect-ratio: 1/0.14;
+  border-radius: 100vmax;
+  background-color: #e60012;
+  border: 1px solid #e60012;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  transition: all 0.3s;
 }
 
 /**
