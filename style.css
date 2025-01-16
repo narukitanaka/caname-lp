@@ -613,6 +613,238 @@ top
   flex-direction: row-reverse;
 }
 
+.wrap02 {
+  padding: 10rem 0;
+  background-color: #faf5e6;
+}
+.wrap02 .head-ttl-wrap {
+  position: relative;
+  padding: 2.2rem 0 4.7rem;
+  background-color: #063458;
+}
+.wrap02 .head-ttl-wrap h3 {
+  width: 58rem;
+  margin: 0 auto;
+}
+.wrap02 .head-ttl-wrap svg {
+  position: absolute;
+  bottom: -3.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wrap02 .head-ttl-wrap svg path {
+  fill: #063458;
+}
+.wrap02 .block {
+  background-color: #fff;
+  padding: 8.8rem 5rem 8rem;
+  box-shadow: 0px 0px 36px rgba(6, 52, 88, 0.3);
+}
+.wrap02 .block .box {
+  position: relative;
+  margin-bottom: 4rem;
+}
+.wrap02 .block .box:first-of-type .ttl-wrap,
+.wrap02 .block .box:first-of-type p {
+  width: 69.5rem;
+}
+.wrap02 .block .box:first-of-type .people {
+  width: 26.4rem;
+  position: absolute;
+  top: 10rem;
+  right: 0;
+}
+.wrap02 .block .box:nth-of-type(2) .ttl-wrap,
+.wrap02 .block .box:nth-of-type(2) p {
+  width: 57.7rem;
+}
+.wrap02 .block .box:nth-of-type(2) .people {
+  width: 36.2rem;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+}
+.wrap02 .block .box.reverse .ttl-wrap,
+.wrap02 .block .box.reverse p {
+  margin: 0 0 0 auto;
+}
+.wrap02 .block .box.dannetsu .cate::before, .wrap02 .block .box.dannetsu .cate::after {
+  background-color: #e60012;
+}
+.wrap02 .block .box.syanetsu {
+  margin-top: 6.5rem;
+}
+.wrap02 .block .box.syanetsu .cate {
+  margin-bottom: 7.7rem;
+}
+.wrap02 .block .box.syanetsu .cate::before, .wrap02 .block .box.syanetsu .cate::after {
+  background-color: #ffaa5b;
+}
+.wrap02 .block .box.syanetsu .q-a dl {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 1.2rem 0;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.wrap02 .block .box.syanetsu .q-a dl::before {
+  content: "";
+  position: absolute;
+}
+.wrap02 .block .box.syanetsu .q-a dl dt,
+.wrap02 .block .box.syanetsu .q-a dl dd {
+  font-weight: 600;
+}
+.wrap02 .block .box.syanetsu .q-a dl dt {
+  font-size: 3rem;
+  margin-top: -0.5rem;
+}
+.wrap02 .block .box.syanetsu .q-a dl dd {
+  font-size: 2.4rem;
+}
+.wrap02 .block .box.syanetsu .q-a dl .people {
+  width: 13.1rem;
+  position: absolute;
+}
+.wrap02 .block .box.syanetsu .q-a dl.question {
+  width: 56.5rem;
+  background-color: #e8f6ff;
+  padding-left: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+.wrap02 .block .box.syanetsu .q-a dl.question::before {
+  width: 2.5rem;
+  aspect-ratio: 1/0.7;
+  background: url(../images/wrap02_syanetsu-hukidashi-q.png) no-repeat center/contain;
+  bottom: 1rem;
+  left: -2.4rem;
+}
+.wrap02 .block .box.syanetsu .q-a dl.question .people {
+  top: -5.5rem;
+  left: -15rem;
+}
+.wrap02 .block .box.syanetsu .q-a dl.question dt {
+  color: #ffdc00;
+}
+.wrap02 .block .box.syanetsu .q-a dl.question dd {
+  color: #063458;
+}
+.wrap02 .block .box.syanetsu .q-a dl.anser {
+  width: 71.4rem;
+  background-color: rgba(255, 181, 60, 0.28);
+  padding-left: 2.4rem;
+  margin-bottom: 1.3rem;
+}
+.wrap02 .block .box.syanetsu .q-a dl.anser::before {
+  width: 2.6rem;
+  aspect-ratio: 1/0.66;
+  background: url(../images/wrap02_syanetsu-hukidashi-a.png) no-repeat center/contain;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -2.6rem;
+}
+.wrap02 .block .box.syanetsu .q-a dl.anser .people {
+  top: -5rem;
+  right: -16rem;
+}
+.wrap02 .block .box.syanetsu .q-a dl.anser dt {
+  color: #e66400;
+}
+.wrap02 .block .box.syanetsu .q-a .info {
+  position: relative;
+  width: 71.4rem;
+  background-color: #fff9dc;
+  padding: 1.8rem 1.5rem;
+  margin: 0 auto 4rem;
+}
+.wrap02 .block .box.syanetsu .q-a .info::before {
+  content: "";
+  width: 3rem;
+  aspect-ratio: 1/1;
+  background: url(../images/icon-pen.svg) no-repeat center/contain;
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+}
+.wrap02 .block .box.syanetsu .q-a .info h5 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e66400;
+  margin-bottom: 1rem;
+}
+.wrap02 .block .box.syanetsu .q-a .info p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+.wrap02 .block .box.syanetsu .flex {
+  gap: 3.5rem;
+}
+.wrap02 .block .box.syanetsu .flex .text-wrap,
+.wrap02 .block .box.syanetsu .flex p {
+  width: 54.8rem;
+}
+.wrap02 .block .box.syanetsu .flex .text-wrap h4 {
+  margin-bottom: 2.8rem;
+}
+.wrap02 .block .box.syanetsu .flex .img-box {
+  width: 36.6rem;
+}
+.wrap02 .block .box .cate {
+  position: relative;
+  width: 14.8rem;
+  margin: 0 auto 4rem;
+}
+.wrap02 .block .box .cate::before, .wrap02 .block .box .cate::after {
+  content: "";
+  width: 40.7rem;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wrap02 .block .box .cate::before {
+  left: -43rem;
+}
+.wrap02 .block .box .cate::after {
+  right: -43rem;
+}
+.wrap02 .block .box .ttl-wrap h4 {
+  margin-bottom: 2.8rem;
+}
+.wrap02 .block .box p {
+  line-height: 1.7;
+}
+.wrap02 .block .box p:last-of-type {
+  margin-bottom: 3.8rem;
+}
+.wrap02 .block .box p span {
+  font-weight: 500;
+  text-decoration: underline;
+}
+.wrap02 .block .box p strong {
+  color: #e60012;
+}
+.wrap02 .block .box p.marker {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #063458;
+  margin-top: 1rem;
+  z-index: 1;
+}
+.wrap02 .block .box p.marker::before {
+  content: "";
+  width: 97%;
+  height: 11px;
+  background-color: #ffdc00;
+  position: absolute;
+  bottom: 3px;
+  z-index: -1;
+}
+
 /**
  * Swiper 8.1.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
