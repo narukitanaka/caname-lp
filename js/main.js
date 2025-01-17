@@ -1,27 +1,27 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 // Intersection Observer フェードイン
 ///////////////////////////////////////////////////////////////////////////////////////
-function initIntersectionObserver() {
-  const fadeIn = document.querySelectorAll(".fadeIn");
-  if (fadeIn.length === 0) return;
+// function initIntersectionObserver() {
+//   const fadeIn = document.querySelectorAll(".fadeIn");
+//   if (fadeIn.length === 0) return;
 
-  const options = {
-    rootMargin: "0px",
-    threshold: 0.6,
-  };
+//   const options = {
+//     rootMargin: "0px",
+//     threshold: 0.6,
+//   };
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  }, options);
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("active");
+//       }
+//     });
+//   }, options);
 
-  fadeIn.forEach((element) => {
-    observer.observe(element);
-  });
-}
+//   fadeIn.forEach((element) => {
+//     observer.observe(element);
+//   });
+// }
 
 ////////////////////////////////////////////////////////////////////////////////////////
 // Swiper
@@ -93,7 +93,7 @@ function initSwipers() {
 }
 // DOM Ready時の初期化
 document.addEventListener("DOMContentLoaded", function () {
-  initIntersectionObserver();
+  // initIntersectionObserver();
   initSwipers();
 });
 
@@ -109,3 +109,24 @@ $(".qa-list dl").on("click", function (e) {
     $(this).addClass("open");
   }
 });
+
+////////////////////////////////////////////////////////////////////////////////////////
+// GSAP アニメーション
+///////////////////////////////////////////////////////////////////////////////////////
+// GSAPフェードイン
+const textElements = document.querySelectorAll(".fadeIn");
+if (textElements.length > 0) {
+  textElements.forEach((element) => {
+    gsap.from(element, {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: element, // 各要素をトリガーに
+        start: "top 60%",
+        once: true,
+      },
+    });
+  });
+}

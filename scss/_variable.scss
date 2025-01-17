@@ -18,14 +18,14 @@ $shadow06: 0px 0px 6px rgba(#063458, 0.2);
 $shadow07: 0px 0px 24px rgba(#063458, 0.1);
 $shadow08: 0px 0px 5px rgba(#063458, 0.24);
 $shadow09: 0px 4px 36px rgba(#063458, 0.15);
-$shadow10: -2px -2px 6px rgba(#000, 0.06);
+$shadow10: 2px 2px 6px rgba(#000, 0.06) inset;
 
 //vwを自動計算
 $base-viewport: 1440;
 @function pxtovw($size-in-px) {
   @return ($size-in-px / $base-viewport) * 100vw;
 }
-$base-viewport_sp: 375;
+$base-viewport_sp: 390;
 @function pxtovw_sp($size-in-px) {
   @return ($size-in-px / $base-viewport_sp) * 100vw;
 }

@@ -207,23 +207,24 @@ body {
     max-width: 1000px;
   }
   @include mq() {
-    width: 90%;
+    // width: 90%;
+    width: v.pxtovw_sp(360);
     max-width: 750px;
   }
 }
-.inner-wide {
-  width: 95%;
-  max-width: 136rem;
-  margin: 0 auto;
-  @include mq(md) {
-    width: 80%;
-    max-width: 1000px;
-  }
-  @include mq() {
-    width: 90%;
-    max-width: 750px;
-  }
-}
+// .inner-wide {
+//   width: 95%;
+//   max-width: 136rem;
+//   margin: 0 auto;
+//   @include mq(md) {
+//     width: 80%;
+//     max-width: 1000px;
+//   }
+//   @include mq() {
+//     width: 90%;
+//     max-width: 750px;
+//   }
+// }
 
 h3,
 div,
@@ -286,6 +287,10 @@ input[type="button"] {
 .wrap_cta {
   background: url(../images/cta_bg.png) no-repeat center/cover;
   padding: 7.5rem 0;
+  @include mq() {
+    overflow: hidden;
+    padding: 6rem 0;
+  }
   .box {
     position: relative;
     width: 118rem;
@@ -295,19 +300,35 @@ input[type="button"] {
     border: 3px solid;
     border-image: linear-gradient(to right, #f1cf70 50%, #0181cc 50%) 1;
     border-top: none;
+    @include mq() {
+      width: v.pxtovw_sp(360);
+      padding-bottom: 2rem;
+    }
     .head-wrap {
       padding: 5px 2.7rem;
       box-shadow: v.$shadow03;
       margin-bottom: 3rem;
       background: url(../images/cta_head-ttl_bg.svg) no-repeat center/cover;
+      scale: 1.001;
+      @include mq() {
+        padding: 5px v.pxtovw_sp(10);
+        margin-bottom: 14.3rem;
+      }
       .logo {
         width: 60.8rem;
+        @include mq() {
+          width: v.pxtovw_sp(218);
+        }
       }
     }
     .form {
       width: 51.6rem;
       margin-left: 9rem;
       margin-bottom: 2rem;
+      @include mq() {
+        width: v.pxtovw_sp(325);
+        margin: 0 auto 2rem;
+      }
       p {
         gap: 1rem;
         @include flex(center, center);
@@ -332,6 +353,15 @@ input[type="button"] {
           rgba(160, 0, 12, 1) 100%
         );
         box-shadow: v.$shadow04;
+        transition: all 0.3s;
+        @include mq() {
+          width: v.pxtovw_sp(325);
+          width: 100%;
+          aspect-ratio: 1/0.2;
+        }
+        &:hover {
+          scale: 1.1;
+        }
         svg {
           position: absolute;
           top: 50%;
@@ -345,6 +375,13 @@ input[type="button"] {
       padding-left: 22rem;
       gap: 4rem;
       align-items: center;
+      @include mq() {
+        width: v.pxtovw_sp(325);
+        flex-direction: column;
+        padding-left: 0;
+        gap: 1.5rem;
+        margin: 0 auto;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -356,6 +393,15 @@ input[type="button"] {
         border-bottom: 10px solid transparent;
         border-left: 14px solid #7fc0e5;
         border-right: 0;
+        @include mq() {
+          left: 50%;
+          transform: translateX(-50%);
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+          border-top: 7px solid #7fc0e5;
+          border-bottom: 0;
+          bottom: 4.7rem;
+        }
       }
       p {
         font-size: 1.8rem;
@@ -364,12 +410,20 @@ input[type="button"] {
       .txt {
         color: v.$sub-color01;
         margin-bottom: 5px;
+        @include mq() {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
       }
       .time {
         color: v.$sub-color02;
+        @include mq() {
+          font-size: 1.4rem;
+          text-align: center;
+        }
         span {
           font-size: 1.4rem;
-          border: 1px solid v.$sub-color02;
+          border: 1.5px solid v.$sub-color02;
           padding: 0 5px;
           margin-right: 1rem;
         }
@@ -377,9 +431,22 @@ input[type="button"] {
       a {
         font-size: 4.7rem;
         font-weight: 600;
+        transition: all 0.3s;
+        @include mq() {
+          font-size: 3.6rem;
+        }
+        &:hover {
+          color: #0181cc;
+          svg {
+            path {
+              fill: #0181cc;
+            }
+          }
+        }
         svg {
           path {
             fill: #333;
+            transition: all 0.3s;
           }
         }
       }
@@ -391,12 +458,22 @@ input[type="button"] {
         top: 12rem;
         right: 20rem;
         z-index: 1;
+        @include mq() {
+          width: v.pxtovw_sp(162);
+          top: 10rem;
+          right: v.pxtovw_sp(180);
+        }
       }
       .people {
         width: 35.8rem;
         position: absolute;
         bottom: 0;
         right: 0;
+        @include mq() {
+          width: v.pxtovw_sp(190);
+          bottom: auto;
+          top: 2rem;
+        }
       }
     }
   }

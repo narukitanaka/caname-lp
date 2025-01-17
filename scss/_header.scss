@@ -10,14 +10,26 @@ header {
   background-color: #fff;
   border-bottom: 6px solid v.$sub-color02;
   z-index: 999;
+  @include c.mq() {
+    height: 5.8rem;
+  }
   .header-inner {
     @include c.flex(between, end);
     padding: 1.5rem v.pxtovw(21) 1rem v.pxtovw(56);
+    @include c.mq() {
+      padding: 1rem v.pxtovw_sp(15);
+    }
   }
   .logo {
     width: 16rem;
+    @include c.mq() {
+      width: 10rem;
+    }
   }
   .tel {
+    @include c.mq() {
+      display: none;
+    }
     gap: 8px;
     div {
       .ttl {
@@ -48,6 +60,10 @@ header {
         a {
           font-size: 2.8rem;
           font-weight: 600;
+          transition: all 0.3s;
+          &:hover {
+            color: v.$sub-color02;
+          }
         }
       }
     }

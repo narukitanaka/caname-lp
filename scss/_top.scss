@@ -9,66 +9,118 @@ top
   aspect-ratio: 1/0.45;
   height: auto;
   margin-top: 8.8rem;
-  background: url(../images/kv_pc.jpg) no-repeat top/contain;
+  background: url(../images/kv_pc.jpg) no-repeat top/cover;
+  @include c.mq() {
+    aspect-ratio: 1/1.65;
+    margin-top: 5.8rem;
+    background: url(../images/kv_sp.png) no-repeat center/cover;
+  }
   .sub-text {
     width: 44.8rem;
     position: absolute;
     @include c.center(true, false);
     top: v.pxtovw(135);
+    @include c.mq() {
+      width: v.pxtovw_sp(302);
+      top: v.pxtovw_sp(20);
+    }
   }
   .main-text {
     width: 110rem;
     position: absolute;
     @include c.center(true, true);
+    @include c.mq() {
+      width: v.pxtovw_sp(240);
+      @include c.center(true, false);
+      top: v.pxtovw_sp(130);
+      z-index: 1;
+    }
   }
   .gekkeizyu {
     width: 56rem;
     position: absolute;
     @include c.center(true, false);
     bottom: v.pxtovw(70);
+    @include c.mq() {
+      width: v.pxtovw_sp(389);
+      z-index: 1;
+    }
   }
   .people {
     width: 19.2rem;
     position: absolute;
+    @include c.mq() {
+      width: v.pxtovw_sp(118);
+    }
     &.hot {
       top: v.pxtovw(47);
       left: v.pxtovw(72);
+      @include c.mq() {
+        top: v.pxtovw_sp(110);
+        left: auto;
+        right: v.pxtovw_sp(10);
+      }
     }
     &.cold {
       bottom: v.pxtovw(74);
       right: v.pxtovw(72);
+      @include c.mq() {
+        bottom: v.pxtovw_sp(110);
+        right: auto;
+        left: v.pxtovw_sp(10);
+      }
     }
   }
 }
 
 .wrap01_negative {
+  margin-top: -1px;
   position: relative;
   padding: 6rem 0 34.5rem;
   background: url(../images/wrap01_bg01.png) no-repeat top/contain,
     url(../images/wrap01_bg02.png) no-repeat bottom/contain;
   z-index: 0;
+  @include c.mq() {
+    padding: 6rem 0 25.5rem;
+  }
   h2 {
     text-align: center;
     width: 71.7rem;
     margin: 0 auto 5.5rem;
+    @include c.mq() {
+      width: 100%;
+    }
   }
   .block {
     position: relative;
     padding: 6rem 5rem 4rem;
     background-color: #fff;
     margin-bottom: 2.2rem;
+    @include c.mq() {
+      padding: 4rem 1rem 2rem;
+      margin-bottom: 0;
+    }
     h3 {
       font-size: 2.8rem;
       font-weight: 600;
       text-align: center;
       color: v.$sub-color01;
       margin-bottom: 3rem;
+      @include c.mq() {
+        font-size: 2rem;
+      }
     }
     .flex {
       flex-wrap: wrap;
       gap: 1rem;
+      @include c.mq() {
+        gap: 0.5rem;
+      }
       .box {
         width: calc((100% / 3) - (2rem / 3));
+        @include c.mq() {
+          width: calc((100% / 2) - (0.5rem / 2));
+        }
         .txt {
           position: relative;
           img {
@@ -89,6 +141,9 @@ top
             text-align: center;
             background-color: v.$sub-color01;
             padding: 7px 0;
+            @include c.mq() {
+              font-size: 1.4rem;
+            }
           }
         }
       }
@@ -97,6 +152,12 @@ top
       position: absolute;
       width: 28.5rem;
       @include c.center(true, false);
+      @include c.mq() {
+        width: v.pxtovw_sp(150);
+        svg {
+          width: 100%;
+        }
+      }
       &.c-blu {
         top: -1px;
         svg {
@@ -113,6 +174,12 @@ top
   .arrow02 {
     width: 28.5rem;
     margin: 0 auto;
+    @include c.mq() {
+      width: v.pxtovw_sp(150);
+      svg {
+        width: 100%;
+      }
+    }
   }
 }
 .wrap01_positive {
@@ -126,6 +193,10 @@ top
     @include c.center(true, false);
     width: 100rem;
     margin: 0 auto;
+    @include c.mq() {
+      width: 90%;
+      top: -21rem;
+    }
     .omakase_inner {
       position: relative;
       &::before {
@@ -143,20 +214,45 @@ top
         margin: 0 0 0 auto;
         margin-bottom: 2.8rem;
         z-index: 1;
+        @include c.mq() {
+          width: v.pxtovw_sp(360);
+          max-width: 40rem;
+          margin-bottom: 1rem;
+        }
       }
       .people {
         position: absolute;
         top: -5rem;
         left: 0;
         width: 21.5rem;
+        @include c.mq() {
+          top: -12rem;
+          width: v.pxtovw_sp(180);
+        }
       }
       .flex {
         position: relative;
         gap: 1rem;
         z-index: 1;
+        @include c.mq() {
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
         .img-box {
           border: 6px solid #fff;
           box-shadow: v.$shadow01;
+          @include c.mq() {
+            border: 3px solid #fff;
+            width: calc((100% / 2) - (0.5rem / 2));
+            aspect-ratio: 1/0.6;
+          }
+          img {
+            @include c.mq() {
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
         }
       }
     }
@@ -602,6 +698,11 @@ top
     background-color: #fff;
     box-shadow: v.$shadow07;
     padding: 5.8rem 4.4rem 6rem;
+    &.no-img {
+      .right {
+        flex-basis: 100%;
+      }
+    }
     .flex {
       justify-content: space-between;
     }
@@ -783,13 +884,23 @@ top
       width: 100%;
       margin-bottom: 4rem;
       th {
+        position: relative;
         width: 30%;
         font-weight: 500;
         text-align: end;
         padding: 1.5rem 0;
         padding-right: 3.7rem;
+        &.check-list {
+          padding-top: 0;
+          span {
+            top: 0.5rem;
+          }
+        }
         span {
-          font-size: 1.2rem;
+          position: absolute;
+          top: 1.8rem;
+          right: 1.8rem;
+          font-size: 1.4rem;
           font-weight: 600;
           color: v.$sub-color03;
         }
@@ -809,6 +920,7 @@ top
             text-decoration: underline;
           }
           svg {
+            margin-top: 4px;
             path {
               fill: #000;
             }
@@ -829,6 +941,10 @@ top
           width: 100%;
           padding: 1.5rem 2rem;
           box-shadow: v.$shadow10;
+        }
+        input[type="checkbox"] {
+          box-shadow: v.$shadow10 !important;
+          border: 1px solid #c8e2f0;
         }
         textarea {
           margin-bottom: 3rem;
@@ -885,6 +1001,35 @@ top
         text-align: center;
         transition: all 0.3s;
       }
+    }
+  }
+}
+
+.thanks {
+  padding: 25rem 0 15rem;
+  h2 {
+    font-size: 3rem;
+  }
+  p {
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 2rem;
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+  }
+  .btn-wrap {
+    a {
+      @include c.flex(center, center);
+      width: 90%;
+      max-width: 45rem;
+      aspect-ratio: 1/0.14;
+      margin: 0 auto;
+      font-size: 2rem;
+      font-weight: 500;
+      color: #fff;
+      background-color: v.$sub-color02;
+      border-radius: 100vmax;
     }
   }
 }
