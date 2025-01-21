@@ -11,13 +11,14 @@ header {
   border-bottom: 6px solid v.$sub-color02;
   z-index: 999;
   @include c.mq() {
-    height: 5.8rem;
+    height: 6.5rem;
   }
   .header-inner {
     @include c.flex(between, end);
     padding: 1.5rem v.pxtovw(21) 1rem v.pxtovw(56);
     @include c.mq() {
       padding: 1rem v.pxtovw_sp(15);
+      align-items: flex-start;
     }
   }
   .logo {
@@ -27,10 +28,10 @@ header {
     }
   }
   .tel {
-    @include c.mq() {
-      display: none;
-    }
     gap: 8px;
+    @include c.mq() {
+      gap: 5px;
+    }
     div {
       .ttl {
         font-size: 1.2rem;
@@ -42,6 +43,9 @@ header {
           color: v.$sub-color02;
           padding-left: 7px;
           margin-bottom: 0.9rem;
+          @include c.mq(md) {
+            margin-bottom: 2px;
+          }
         }
         .time {
           font-size: 1.4rem;
@@ -61,6 +65,9 @@ header {
           font-size: 2.8rem;
           font-weight: 600;
           transition: all 0.3s;
+          @include c.mq() {
+            font-size: 1.6rem;
+          }
           &:hover {
             color: v.$sub-color02;
           }

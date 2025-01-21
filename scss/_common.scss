@@ -209,22 +209,9 @@ body {
   @include mq() {
     // width: 90%;
     width: v.pxtovw_sp(360);
-    max-width: 750px;
+    max-width: 600px;
   }
 }
-// .inner-wide {
-//   width: 95%;
-//   max-width: 136rem;
-//   margin: 0 auto;
-//   @include mq(md) {
-//     width: 80%;
-//     max-width: 1000px;
-//   }
-//   @include mq() {
-//     width: 90%;
-//     max-width: 750px;
-//   }
-// }
 
 h3,
 div,
@@ -238,6 +225,9 @@ a {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.4;
+  @include mq() {
+    font-size: 1.5rem;
+  }
 }
 
 .h-scale {
@@ -285,7 +275,7 @@ input[type="button"] {
 }
 
 .wrap_cta {
-  background: url(../images/cta_bg.png) no-repeat center/cover;
+  background: url(images/cta_bg.png) no-repeat center/cover;
   padding: 7.5rem 0;
   @include mq() {
     overflow: hidden;
@@ -308,7 +298,7 @@ input[type="button"] {
       padding: 5px 2.7rem;
       box-shadow: v.$shadow03;
       margin-bottom: 3rem;
-      background: url(../images/cta_head-ttl_bg.svg) no-repeat center/cover;
+      background: url(images/cta_head-ttl_bg.svg) no-repeat center/cover;
       scale: 1.001;
       @include mq() {
         padding: 5px v.pxtovw_sp(10);
@@ -367,6 +357,9 @@ input[type="button"] {
           top: 50%;
           transform: translateY(-50%);
           right: 12rem;
+          @include mq() {
+            right: 4rem;
+          }
         }
       }
     }
@@ -477,4 +470,8 @@ input[type="button"] {
       }
     }
   }
+}
+
+.grecaptcha-badge {
+  z-index: 999;
 }

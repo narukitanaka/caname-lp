@@ -9,11 +9,11 @@ top
   aspect-ratio: 1/0.45;
   height: auto;
   margin-top: 8.8rem;
-  background: url(../images/kv_pc.jpg) no-repeat top/cover;
+  background: url(images/kv_pc.jpg) no-repeat top/cover;
   @include c.mq() {
     aspect-ratio: 1/1.65;
-    margin-top: 5.8rem;
-    background: url(../images/kv_sp.png) no-repeat center/cover;
+    margin-top: 6.5rem;
+    background: url(images/kv_sp.png) no-repeat center/cover;
   }
   .sub-text {
     width: 44.8rem;
@@ -77,11 +77,13 @@ top
   margin-top: -1px;
   position: relative;
   padding: 6rem 0 34.5rem;
-  background: url(../images/wrap01_bg01.png) no-repeat top/contain,
-    url(../images/wrap01_bg02.png) no-repeat bottom/contain;
+  background: url(images/wrap01_bg01.png) no-repeat top/contain,
+    url(images/wrap01_bg02.png) no-repeat bottom/contain;
   z-index: 0;
   @include c.mq() {
-    padding: 6rem 0 25.5rem;
+    padding: 6rem 0 21.5rem;
+    background: url(images/wrap01_bg01_sp.png) no-repeat top/contain,
+      url(images/wrap01_bg02_sp.png) no-repeat bottom/contain;
   }
   h2 {
     text-align: center;
@@ -89,6 +91,7 @@ top
     margin: 0 auto 5.5rem;
     @include c.mq() {
       width: 100%;
+      margin-bottom: 2rem;
     }
   }
   .block {
@@ -97,8 +100,8 @@ top
     background-color: #fff;
     margin-bottom: 2.2rem;
     @include c.mq() {
-      padding: 4rem 1rem 2rem;
-      margin-bottom: 0;
+      padding: 3rem 1rem 2rem;
+      margin-bottom: 1.5rem;
     }
     h3 {
       font-size: 2.8rem;
@@ -108,6 +111,7 @@ top
       margin-bottom: 3rem;
       @include c.mq() {
         font-size: 2rem;
+        margin-bottom: 2rem;
       }
     }
     .flex {
@@ -128,10 +132,20 @@ top
             top: 0;
             left: 1rem;
             width: 2.4rem;
+            @include c.mq() {
+              top: -0.5rem;
+              left: -0.5rem;
+              width: 2rem;
+            }
             &.reverse {
               left: auto;
               right: 2.4rem;
               transform: scale(-1, 1);
+              @include c.mq() {
+                top: -0.5rem;
+                left: -0.5rem;
+                transform: none;
+              }
             }
           }
           p {
@@ -153,13 +167,16 @@ top
       width: 28.5rem;
       @include c.center(true, false);
       @include c.mq() {
-        width: v.pxtovw_sp(150);
+        width: v.pxtovw_sp(125);
         svg {
           width: 100%;
         }
       }
       &.c-blu {
         top: -1px;
+        @include c.mq() {
+          top: -1.2rem;
+        }
         svg {
           path {
             fill: v.$sub-color02;
@@ -168,6 +185,9 @@ top
       }
       &.c-whi {
         bottom: -3.5rem;
+        @include c.mq() {
+          bottom: -3rem;
+        }
       }
     }
   }
@@ -184,9 +204,13 @@ top
 }
 .wrap01_positive {
   position: relative;
-  background: url(../images/wrap01_bg03.png) no-repeat center/cover;
+  background: url(images/wrap01_bg03.png) no-repeat center/cover;
   background-color: rgba($color: v.$sub-color01, $alpha: 0.1);
   padding-bottom: 10rem;
+  @include c.mq() {
+    background: url(images/wrap01_bg03_sp.png) no-repeat center/cover;
+    padding-bottom: 6rem;
+  }
   .omakase {
     position: absolute;
     top: -33rem;
@@ -206,7 +230,11 @@ top
         bottom: -7rem;
         width: 28.8rem;
         aspect-ratio: 1/0.13;
-        background: url(../images/section-arrow03.svg) no-repeat top/contain;
+        background: url(images/section-arrow03.svg) no-repeat top/contain;
+        @include c.mq() {
+          width: 16rem;
+          bottom: -4rem;
+        }
       }
       h2 {
         position: relative;
@@ -217,7 +245,7 @@ top
         @include c.mq() {
           width: v.pxtovw_sp(360);
           max-width: 40rem;
-          margin-bottom: 1rem;
+          margin-bottom: 0.7rem;
         }
       }
       .people {
@@ -237,6 +265,8 @@ top
         @include c.mq() {
           flex-wrap: wrap;
           gap: 0.5rem;
+          width: 95%;
+          margin: 0 auto;
         }
         .img-box {
           border: 6px solid #fff;
@@ -262,14 +292,19 @@ top
     padding-top: 19.7rem;
     padding: 18rem 5rem 8rem;
     box-shadow: v.$shadow02;
+    @include c.mq() {
+      padding: 11rem 1.5rem 5rem;
+    }
     .box {
       gap: 4rem;
       margin-bottom: 7rem;
+      @include c.mq() {
+        margin-bottom: 3rem;
+      }
       &:last-of-type {
         margin-bottom: 0;
       }
       .left {
-        // width: 49.5rem;
         .num {
           position: relative;
           display: inline-block;
@@ -280,6 +315,10 @@ top
           font-weight: 600;
           color: v.$sub-color03;
           margin-bottom: 1rem;
+          @include c.mq() {
+            padding-left: 4rem;
+            font-size: 2.4rem;
+          }
           &::before {
             content: "";
             width: 0;
@@ -292,6 +331,9 @@ top
             position: absolute;
             @include c.center(false, true);
             left: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 28px solid v.$sub-color03;
           }
         }
         h3 {
@@ -299,17 +341,35 @@ top
           font-weight: 600;
           color: v.$sub-color01;
           margin-bottom: 2.5rem;
+          @include c.mq() {
+            font-size: 2.1rem;
+            margin-bottom: 1.5rem;
+          }
+        }
+        .img-box {
+          @include c.mq() {
+            // width: 80%;
+            margin-bottom: 2rem;
+            // margin: 0 auto 2rem;
+          }
         }
         h4 {
           font-size: 2.2rem;
           font-weight: 600;
           color: v.$sub-color02;
           margin-bottom: 2rem;
+          @include c.mq() {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+          }
         }
         p {
           font-size: 1.8rem;
           font-weight: 500;
           line-height: 1.7;
+          @include c.mq() {
+            font-size: 1.5rem;
+          }
           span {
             font-weight: 600;
             text-decoration: underline;
@@ -320,6 +380,9 @@ top
         }
       }
       .right {
+        @include c.mq() {
+          display: none;
+        }
         .img-box {
           width: 47.7rem;
         }
@@ -333,19 +396,33 @@ top
 .wrap02 {
   padding: 10rem 0;
   background-color: #faf5e6;
+  @include c.mq() {
+    padding: 6rem 0;
+  }
   .head-ttl-wrap {
     position: relative;
     padding: 2.2rem 0 4.7rem;
     background-color: v.$sub-color01;
+    @include c.mq() {
+      margin-top: -1px;
+      padding: 2.2rem 0 3.2rem;
+    }
     h3 {
       width: 58rem;
       margin: 0 auto;
+      @include c.mq() {
+        width: 90%;
+      }
     }
     svg {
       position: absolute;
       bottom: -3.1rem;
       left: 50%;
       transform: translateX(-50%);
+      @include c.mq() {
+        width: 12rem;
+        bottom: -2.2rem;
+      }
       path {
         fill: v.$sub-color01;
       }
@@ -355,6 +432,9 @@ top
     background-color: #fff;
     padding: 8.8rem 5rem 8rem;
     box-shadow: v.$shadow05;
+    @include c.mq() {
+      padding: 5rem 1.5rem;
+    }
     .box {
       position: relative;
       margin-bottom: 4rem;
@@ -362,24 +442,36 @@ top
         .ttl-wrap,
         p {
           width: 69.5rem;
+          @include c.mq() {
+            width: 100%;
+          }
         }
         .people {
           width: 26.4rem;
           position: absolute;
           top: 10rem;
           right: 0;
+          @include c.mq() {
+            display: none;
+          }
         }
       }
       &:nth-of-type(2) {
         .ttl-wrap,
         p {
           width: 57.7rem;
+          @include c.mq() {
+            width: 100%;
+          }
         }
         .people {
           width: 36.2rem;
           position: absolute;
           top: 2rem;
           left: 0;
+          @include c.mq() {
+            display: none;
+          }
         }
       }
       &.reverse {
@@ -398,8 +490,14 @@ top
       }
       &.syanetsu {
         margin-top: 6.5rem;
+        @include c.mq() {
+          margin-bottom: 0;
+        }
         .cate {
           margin-bottom: 7.7rem;
+          @include c.mq() {
+            margin-bottom: 4rem;
+          }
           &::before,
           &::after {
             background-color: #ffaa5b;
@@ -425,30 +523,52 @@ top
             dt {
               font-size: 3rem;
               margin-top: -0.5rem;
+              @include c.mq() {
+                font-size: 1.8rem;
+              }
             }
             dd {
               font-size: 2.4rem;
+              @include c.mq() {
+                font-size: 1.5rem;
+              }
             }
             .people {
               width: 13.1rem;
               position: absolute;
+              @include c.mq() {
+                width: 7.5rem;
+              }
             }
             &.question {
               width: 56.5rem;
               background-color: #e8f6ff;
               padding-left: 1.8rem;
               margin-bottom: 2.4rem;
+              @include c.mq() {
+                padding-left: 1rem;
+                width: 25rem;
+                margin: 0 0 2.4rem auto;
+              }
               &::before {
                 width: 2.5rem;
                 aspect-ratio: 1/0.7;
-                background: url(../images/wrap02_syanetsu-hukidashi-q.png)
+                background: url(images/wrap02_syanetsu-hukidashi-q.png)
                   no-repeat center/contain;
                 bottom: 1rem;
                 left: -2.4rem;
+                @include c.mq() {
+                  width: 2rem;
+                  left: -2rem;
+                }
               }
               .people {
                 top: -5.5rem;
                 left: -15rem;
+                @include c.mq() {
+                  top: -3.5rem;
+                  left: -8rem;
+                }
               }
               dt {
                 color: v.$sub-color04;
@@ -462,18 +582,32 @@ top
               background-color: rgba($color: #ffb53c, $alpha: 0.28);
               padding-left: 2.4rem;
               margin-bottom: 1.3rem;
+              @include c.mq() {
+                width: 24rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin: 0 auto 1.3rem 0;
+              }
               &::before {
                 width: 2.6rem;
                 aspect-ratio: 1/0.66;
-                background: url(../images/wrap02_syanetsu-hukidashi-a.png)
+                background: url(images/wrap02_syanetsu-hukidashi-a.png)
                   no-repeat center/contain;
                 top: 50%;
                 transform: translateY(-50%);
                 right: -2.6rem;
+                @include c.mq() {
+                  width: 2rem;
+                  right: -2rem;
+                }
               }
               .people {
                 top: -5rem;
                 right: -16rem;
+                @include c.mq() {
+                  top: 0rem;
+                  right: -10rem;
+                }
               }
               dt {
                 color: #e66400;
@@ -486,20 +620,28 @@ top
             background-color: #fff9dc;
             padding: 1.8rem 1.5rem;
             margin: 0 auto 4rem;
+            width: 100%;
             &::before {
               content: "";
               width: 3rem;
               aspect-ratio: 1/1;
-              background: url(../images/icon-pen.svg) no-repeat center/contain;
+              background: url(images/icon-pen.svg) no-repeat center/contain;
               position: absolute;
               top: 1.2rem;
               right: 2rem;
+              @include c.mq() {
+                width: 2.5rem;
+              }
             }
             h5 {
               font-size: 2rem;
               font-weight: 600;
               color: #e66400;
               margin-bottom: 1rem;
+              @include c.mq() {
+                font-size: 1.8rem;
+                text-align: center;
+              }
             }
             p {
               font-size: 1.5rem;
@@ -510,9 +652,17 @@ top
         }
         .flex {
           gap: 3.5rem;
+          @include c.mq() {
+            flex-direction: column;
+            gap: 0rem;
+            margin-bottom: 3rem;
+          }
           .text-wrap,
           p {
             width: 54.8rem;
+            @include c.mq() {
+              width: 100%;
+            }
           }
           .text-wrap {
             h4 {
@@ -521,6 +671,9 @@ top
           }
           .img-box {
             width: 36.6rem;
+            @include c.mq() {
+              width: 100%;
+            }
           }
         }
       }
@@ -528,6 +681,9 @@ top
         position: relative;
         width: 14.8rem;
         margin: 0 auto 4rem;
+        @include c.mq() {
+          width: 10rem;
+        }
         &::before,
         &::after {
           content: "";
@@ -536,23 +692,91 @@ top
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
+          @include c.mq() {
+            width: v.pxtovw_sp(90);
+            height: 3px;
+          }
         }
         &::before {
           left: -43rem;
+          @include c.mq() {
+            left: v.pxtovw_sp(-110);
+          }
         }
         &::after {
           right: -43rem;
+          @include c.mq() {
+            right: v.pxtovw_sp(-110);
+          }
         }
       }
       .ttl-wrap {
+        .sub-ttl {
+          position: relative;
+          display: inline-block;
+          padding: 1rem 3rem;
+          font-size: 2rem;
+          font-weight: 600;
+          font-style: italic;
+          color: v.$sub-color01;
+          margin-bottom: 1.2rem;
+          z-index: 0;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: v.$sub-color04;
+            transform: skew(-15deg);
+            z-index: -1;
+          }
+        }
         h4 {
+          // font-size: 3.2rem;
+          // font-weight: 600;
+          // color: v.$sub-color01;
           margin-bottom: 2.8rem;
+          // span {
+          //   position: relative;
+          //   display: inline-block;
+          //   padding: 0 1px;
+          //   &::before {
+          //     content: attr(data-text);
+          //     position: absolute;
+          //     left: 50%;
+          //     top: 50%;
+          //     transform: translate(-50%, -50%);
+          //     color: #063458;
+          //     font-weight: bold;
+          //     -webkit-text-stroke: 6px #063458;
+          //     z-index: -1;
+          //     white-space: nowrap;
+          //   }
+          //   &::after {
+          //     content: attr(data-text);
+          //     position: absolute;
+          //     left: 50%;
+          //     top: 50%;
+          //     transform: translate(-50%, -50%);
+          //     color: #fff;
+          //     font-weight: bold;
+          //     white-space: nowrap;
+          //   }
+          // }
+          @include c.mq() {
+            margin-bottom: 1.5rem;
+          }
         }
       }
       p {
         line-height: 1.7;
         &:last-of-type {
           margin-bottom: 3.8rem;
+          @include c.mq() {
+            margin-bottom: 2rem;
+          }
         }
         span {
           font-weight: 500;
@@ -568,6 +792,10 @@ top
           color: v.$sub-color01;
           margin-top: 1rem;
           z-index: 1;
+          @include c.mq() {
+            font-size: 1.8rem;
+            line-height: 1.4;
+          }
           &::before {
             content: "";
             width: 97%;
@@ -576,6 +804,21 @@ top
             position: absolute;
             bottom: 3px;
             z-index: -1;
+            @include c.mq() {
+              bottom: -2px;
+            }
+          }
+          &::after {
+            @include c.mq() {
+              content: "";
+              width: 61%;
+              height: 11px;
+              background-color: v.$sub-color04;
+              position: absolute;
+              left: 0;
+              bottom: 2.4rem;
+              z-index: -1;
+            }
           }
         }
       }
@@ -594,6 +837,10 @@ top
     color: v.$sub-color01;
     text-align: center;
     margin-bottom: 8rem;
+    @include c.mq() {
+      font-size: 2.6rem;
+      margin-bottom: 4rem;
+    }
   }
 }
 
@@ -610,19 +857,39 @@ top
       rgba(13, 112, 190, 1) 0%,
       rgba(6, 52, 88, 1) 100%
     );
+    @include c.mq() {
+      width: 5rem;
+    }
     &::after {
       font-size: 2rem;
       font-weight: 600;
       color: #fff;
+      @include c.mq() {
+        font-size: 1.6rem;
+      }
     }
   }
   .swiper-pagination {
     bottom: -60px !important;
+    @include c.mq() {
+      max-width: 30rem;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 1rem;
+      justify-content: flex-start;
+      left: 50% !important;
+      bottom: -50px !important;
+      transform: translateX(-50%);
+    }
     .swiper-pagination-bullet {
       width: 1.4rem !important;
       height: 1.4rem !important;
       background-color: #d9d9d9;
       border: 1px solid #a6a6a6;
+      @include c.mq() {
+        width: 1rem !important;
+        height: 1rem !important;
+      }
     }
     .swiper-pagination-bullet-active {
       background-color: v.$sub-color01;
@@ -632,7 +899,10 @@ top
 
 .wrap03 {
   padding: 10rem 0 15rem;
-  background: url(../images/wrap03_bg.png) no-repeat top/cover;
+  background: url(images/wrap03_bg.png) no-repeat top/cover;
+  @include c.mq() {
+    padding: 6rem 0 10rem;
+  }
   .swiper-works {
     position: relative;
   }
@@ -640,6 +910,9 @@ top
     background-color: #fff;
     box-shadow: v.$shadow06;
     padding: 2.4rem 2.2rem 3.2rem;
+    @include c.mq() {
+      padding: 1.5rem 1rem 2rem;
+    }
     .ttl {
       margin-bottom: 1rem;
       p {
@@ -651,16 +924,25 @@ top
         color: #fff;
         background-color: v.$sub-color02;
         margin-bottom: 5px;
+        @include c.mq() {
+          font-size: 1.4rem;
+        }
       }
       .name {
         font-size: 2rem;
         color: v.$sub-color01;
+        @include c.mq() {
+          font-size: 1.7rem;
+        }
       }
     }
     dl {
       display: flex;
       gap: 1.2rem;
       margin-bottom: 6px;
+      @include c.mq() {
+        gap: 0.7rem;
+      }
       &:last-of-type {
         margin-bottom: 0;
       }
@@ -668,6 +950,9 @@ top
       dd {
         font-weight: 600;
         color: v.$sub-color01;
+        @include c.mq() {
+          font-size: 1.4rem;
+        }
       }
       dt {
         border: 1px solid v.$sub-color01;
@@ -691,6 +976,9 @@ top
 .wrap04 {
   padding: 10rem 0 15rem;
   background-color: #faf5e6;
+  @include c.mq() {
+    padding: 6rem 0 10rem;
+  }
   .swiper-voice {
     position: relative;
   }
@@ -698,6 +986,12 @@ top
     background-color: #fff;
     box-shadow: v.$shadow07;
     padding: 5.8rem 4.4rem 6rem;
+    @include c.mq() {
+      padding: 2rem 1rem 2rem;
+      min-height: 45rem;
+      max-height: 45rem;
+      overflow: hidden;
+    }
     &.no-img {
       .right {
         flex-basis: 100%;
@@ -711,11 +1005,18 @@ top
     }
     .right {
       flex-basis: 60%;
+      @include c.mq() {
+        flex-basis: 100%;
+      }
       div {
         font-size: 2.4rem;
         font-weight: 600;
         color: v.$sub-color01;
         margin-bottom: 2.5rem;
+        @include c.mq() {
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+        }
       }
       h3 {
         font-size: 2rem;
@@ -723,31 +1024,72 @@ top
         padding-bottom: 2rem;
         border-bottom: 1px solid v.$sub-color02;
         margin-bottom: 2rem;
+        @include c.mq() {
+          font-size: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 1rem;
+          margin-bottom: 1.5rem;
+        }
         span {
           color: #fff;
           background-color: v.$sub-color02;
           padding: 1px 1rem 2px;
           margin-right: 1rem;
+          @include c.mq() {
+            max-width: 8.5rem;
+            margin-bottom: 0.7rem;
+          }
+        }
+      }
+      .img-box {
+        @include c.mq() {
+          aspect-ratio: 1/0.6;
+        }
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+      &:has(.img-box) {
+        p {
+          @include c.mq() {
+            max-height: 10.5rem;
+            overflow-y: scroll;
+          }
         }
       }
     }
   }
   .swiper-pagination {
+    @include c.mq() {
+      justify-content: center;
+    }
     .swiper-pagination-bullet-active {
       background-color: v.$sub-color02;
     }
   }
   .swiper-button-prev {
     left: 100px !important;
+    @include c.mq() {
+      left: v.pxtovw_sp(10) !important;
+    }
   }
   .swiper-button-next {
     right: 100px !important;
+    @include c.mq() {
+      right: v.pxtovw_sp(10) !important;
+    }
   }
 }
 
 .wrap05 {
   padding: 10rem 0;
-  background: url(../images/wrap05_bg.png) no-repeat top/cover;
+  background: url(images/wrap05_bg.png) no-repeat top/cover;
+  @include c.mq() {
+    padding: 6rem 0;
+  }
   .box {
     gap: 4.8rem;
     position: relative;
@@ -755,6 +1097,11 @@ top
     margin: 0 auto 5.7rem;
     background-color: #fff;
     box-shadow: v.$shadow08;
+    @include c.mq() {
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 30rem;
+    }
     &::before {
       position: absolute;
       bottom: -4.5rem;
@@ -763,7 +1110,10 @@ top
       content: "";
       width: 17.8rem;
       aspect-ratio: 1/0.18;
-      background: url(../images/section-arrow03.svg) no-repeat center/contain;
+      background: url(images/section-arrow03.svg) no-repeat center/contain;
+      @include c.mq() {
+        width: 15rem;
+      }
     }
     &:last-of-type {
       &::before {
@@ -772,20 +1122,46 @@ top
     }
     .left {
       width: 34.4rem;
+      @include c.mq() {
+        width: 100%;
+      }
+      .img-box {
+        @include c.mq() {
+          aspect-ratio: 1/0.5;
+        }
+        img {
+          @include c.mq() {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+      }
     }
     .right {
       width: 48rem;
       padding-top: 5rem;
+      @include c.mq() {
+        width: 100%;
+        padding: 0 1rem 2rem;
+      }
       h3 {
         font-size: 2.8rem;
         font-weight: 600;
         color: v.$sub-color01;
         margin-bottom: 1.5rem;
+        @include c.mq() {
+          font-size: 1.8rem;
+          text-align: center;
+        }
       }
       p {
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.7;
+        @include c.mq() {
+          font-size: 1.5rem;
+        }
       }
     }
     .flow-num {
@@ -793,6 +1169,10 @@ top
       position: absolute;
       top: -3.6rem;
       left: -2rem;
+      @include c.mq() {
+        width: 6rem;
+        top: -2.4rem;
+      }
     }
     &:last-of-type {
       margin-bottom: 0;
@@ -802,13 +1182,19 @@ top
 
 .wrap06 {
   padding: 10rem 0;
-  background: url(../images/wrap06_bg.png) no-repeat top/cover;
+  background: url(images/wrap06_bg.png) no-repeat top/cover;
+  @include c.mq() {
+    padding: 6rem 0;
+  }
   .qa-list {
     max-width: 73.2rem;
     margin: 0 auto;
     dl {
       margin-bottom: 2rem;
       box-shadow: v.$shadow09;
+      @include c.mq() {
+        margin-bottom: 1.5rem;
+      }
       &:last-of-type {
         margin-bottom: 0;
       }
@@ -828,22 +1214,34 @@ top
         font-weight: 500;
         padding: 2rem 3rem;
         background-color: #fff;
+        @include c.mq() {
+          padding: 1.5rem 3.5rem 1.5rem 1.5rem;
+          gap: 1rem;
+          font-size: 1.5rem;
+        }
         &::before {
           content: "";
           width: 1.4rem;
           aspect-ratio: 1/1;
-          background: url(../images/faq-arrow.png) no-repeat center/contain;
+          background: url(images/faq-arrow.png) no-repeat center/contain;
           position: absolute;
           top: 50%;
           transform: translateY(-50%) rotate(180deg);
           right: 4rem;
           transition: all 0.3s;
+          @include c.mq() {
+            right: 1.5rem;
+          }
         }
         span {
           font-size: 3rem;
           color: #bdddf0;
           line-height: 1;
           margin-top: -0.5rem;
+          @include c.mq() {
+            font-size: 2.4rem;
+            margin-top: -0.4rem;
+          }
         }
       }
       dd {
@@ -852,10 +1250,18 @@ top
         gap: 2.5rem;
         background-color: #e8f6ff;
         padding: 3rem;
+        @include c.mq() {
+          padding: 1.5rem;
+          gap: 1rem;
+        }
         span {
           font-size: 3rem;
           color: #0081cc;
           margin-top: -1rem;
+          @include c.mq() {
+            font-size: 2.4rem;
+            margin-top: -0.4rem;
+          }
         }
         p {
           font-weight: 500;
@@ -876,6 +1282,9 @@ top
 .wrap_form {
   padding: 10rem 0;
   background-color: #e7f4fc;
+  @include c.mq() {
+    padding: 6rem 0;
+  }
   form {
     max-width: 65rem;
     margin: 0 auto;
@@ -883,6 +1292,13 @@ top
       table-layout: fixed;
       width: 100%;
       margin-bottom: 4rem;
+      th,
+      td {
+        @include c.mq() {
+          display: block;
+          width: 100% !important;
+        }
+      }
       th {
         position: relative;
         width: 30%;
@@ -890,6 +1306,10 @@ top
         text-align: end;
         padding: 1.5rem 0;
         padding-right: 3.7rem;
+        @include c.mq() {
+          text-align: left;
+          padding-bottom: 1rem;
+        }
         &.check-list {
           padding-top: 0;
           span {
@@ -903,10 +1323,17 @@ top
           font-size: 1.4rem;
           font-weight: 600;
           color: v.$sub-color03;
+          @include c.mq() {
+            position: static;
+            margin-left: 1rem;
+          }
         }
       }
       td {
         padding-bottom: 1.6rem;
+        @include c.mq() {
+          padding-bottom: 0;
+        }
         div {
           display: flex;
           align-items: center;
@@ -916,6 +1343,9 @@ top
           display: flex;
           align-items: center;
           gap: 7px;
+          @include c.mq() {
+            justify-content: center;
+          }
           a {
             text-decoration: underline;
           }
@@ -954,11 +1384,14 @@ top
         position: relative;
         width: 25.5rem;
         margin-bottom: 1.6rem;
+        @include c.mq() {
+          margin-bottom: 1rem;
+        }
         &::before {
           content: "";
           width: 1.4rem;
           aspect-ratio: 1/1;
-          background: url(../images/faq-arrow.png) no-repeat center/contain;
+          background: url(images/faq-arrow.png) no-repeat center/contain;
           position: absolute;
           top: 50%;
           transform: translateY(-50%) rotate(180deg);
@@ -986,6 +1419,9 @@ top
         top: 50%;
         transform: translateY(-50%);
         right: 18rem;
+        @include c.mq() {
+          right: 10rem;
+        }
         path {
           transition: all 0.3s;
         }

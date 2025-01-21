@@ -8,16 +8,32 @@ footer {
   background-color: v.$sub-color01;
   .inner {
     justify-content: space-between;
+    @include c.mq() {
+      flex-direction: column;
+      gap: 2rem;
+    }
     p,
     dt,
     dd,
     a {
       font-size: 1.4rem;
       color: #fff;
+      @include c.mq() {
+        font-size: 1.2rem;
+      }
+      svg {
+        @include c.mq() {
+          width: 10px;
+          height: 10px;
+        }
+      }
     }
     dl {
       display: flex;
       gap: 3rem;
+      @include c.mq() {
+        gap: 1.5rem;
+      }
       dt {
         font-weight: 600;
       }

@@ -33,7 +33,7 @@ function initSwipers() {
       loop: true,
       speed: 1000,
       allowTouchMove: false,
-      slidesPerView: 1.1,
+      slidesPerView: 1.4,
       spaceBetween: 9,
       centeredSlides: true, // アクティブなスライドを中央にする
       // 自動再生
@@ -52,7 +52,10 @@ function initSwipers() {
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        769: {
+        767: {
+          slidesPerView: "2.2",
+        },
+        1100: {
           slidesPerView: "3.4",
         },
       },
@@ -65,8 +68,8 @@ function initSwipers() {
       loop: true,
       speed: 1000,
       allowTouchMove: false,
-      slidesPerView: 1.1,
-      spaceBetween: 82,
+      slidesPerView: 1.2,
+      spaceBetween: 10,
       centeredSlides: true, // アクティブなスライドを中央にする
       // 自動再生
       autoplay: {
@@ -84,8 +87,13 @@ function initSwipers() {
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        769: {
+        767: {
+          slidesPerView: "2.2",
+          spaceBetween: 40,
+        },
+        1100: {
           slidesPerView: "1.4",
+          spaceBetween: 82,
         },
       },
     });
